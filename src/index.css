@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container overflow-x-hidden antialiased;
+    background-color: #111318;
+    background-image: 
+        linear-gradient(rgba(18, 114, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(18, 114, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}
+
+@layer utilities {
+  .lightning-glow {
+    box-shadow: 0 0 30px rgba(150, 204, 255, 0.15);
+  }
+  .glitch-border {
+    position: relative;
+  }
+  .glitch-border::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #f5e56b;
+    transition: width 0.1s steps(4);
+  }
+  .glitch-border:hover::after {
+    width: 100%;
+  }
+  .scanline {
+    width: 100%;
+    height: 2px;
+    background: rgba(0, 241, 254, 0.1);
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    pointer-events: none;
+  }
+}

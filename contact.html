@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ZOLDYCK_OS // PROMISED KILLUA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary": "#003353",
+              "on-secondary-fixed-variant": "#004f54",
+              "on-surface-variant": "#bec7d4",
+              "surface-container-highest": "#333539",
+              "tertiary-fixed": "#f5e56b",
+              "inverse-primary": "#00639a",
+              "outline": "#88929d",
+              "secondary-container": "#00f1fe",
+              "surface-container": "#1e2024",
+              "inverse-surface": "#e2e2e8",
+              "tertiary-fixed-dim": "#d8c852",
+              "on-primary-fixed-variant": "#004a76",
+              "inverse-on-surface": "#2f3035",
+              "primary-fixed": "#cee5ff",
+              "surface-bright": "#37393e",
+              "surface-container-lowest": "#0c0e12",
+              "secondary-fixed-dim": "#00dbe7",
+              "on-tertiary-fixed-variant": "#4f4700",
+              "surface-variant": "#333539",
+              "primary-fixed-dim": "#96ccff",
+              "error": "#ffb4ab",
+              "on-tertiary": "#373100",
+              "on-error": "#690005",
+              "primary-container": "#00a6ff",
+              "surface-container-high": "#282a2e",
+              "surface-dim": "#111318",
+              "on-background": "#e2e2e8",
+              "tertiary": "#d8c852",
+              "surface-container-low": "#1a1c20",
+              "on-secondary-container": "#006a70",
+              "surface-tint": "#96ccff",
+              "primary": "#96ccff",
+              "on-tertiary-container": "#3c3600",
+              "on-secondary-fixed": "#002022",
+              "on-primary-container": "#00395b",
+              "outline-variant": "#3f4852",
+              "tertiary-container": "#aea02d",
+              "background": "#111318",
+              "error-container": "#93000a",
+              "on-secondary": "#00363a",
+              "on-surface": "#e2e2e8",
+              "on-error-container": "#ffdad6",
+              "on-tertiary-fixed": "#201c00",
+              "on-primary-fixed": "#001d32",
+              "secondary-fixed": "#74f5ff",
+              "secondary": "#ddfcff",
+              "surface": "#111318"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["JetBrains Mono"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #111318;
+            background-image: 
+                linear-gradient(rgba(18, 114, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(18, 114, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .scanline {
+            width: 100%;
+            height: 2px;
+            background: rgba(0, 241, 254, 0.1);
+            position: absolute;
+            z-index: 10;
+            top: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="font-body text-on-background selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-slate-950/80 backdrop-blur-xl shadow-[0_0_20px_rgba(150,204,255,0.1)]">
+<div class="text-2xl font-black italic text-blue-400 tracking-[0.2em]">ZOLDYCK_OS</div>
+<nav class="hidden md:flex items-center gap-8 font-extrabold uppercase tracking-tighter Inter">
+<a class="text-slate-500 hover:text-blue-300 transition-colors" href="#">MISSIONS</a>
+<a class="text-slate-500 hover:text-blue-300 transition-colors" href="#">TECHNIQUES</a>
+<a class="text-slate-500 hover:text-blue-300 transition-colors" href="#">BIO</a>
+<a class="text-yellow-400 border-b-2 border-yellow-400 pb-1" href="#">TERMINAL</a>
+</nav>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-blue-400" data-icon="bolt">bolt</span>
+<span class="material-symbols-outlined text-slate-500" data-icon="settings_input_component">settings_input_component</span>
+<div class="w-8 h-8 bg-surface-container-highest border border-outline-variant flex items-center justify-center">
+<img alt="Zoldyck Family Seal" class="w-full h-full object-cover" data-alt="Minimalist geometric crest design in electric blue on a dark matte background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlagK2plG_BTZTG32Igi8PAt3ARIBNRdPSalWhzy79MBpgUjd5EwU6LnDknUl00KTJRXSVMT4wxIA-zBLP937WDK5hCSYeDkHrZ0uRrlgbxzuWR0ysVLbPhlhFxMjCAbLSrJ-jTyXLefuSFSgcR3OfU96al7b_F20SQ0TRy5XCp4LCVIU9iwZ-J1dKrm-306jeTjnBVMcbloV-BwCUx8VYESBzKhdnWEFS6aCTSeXwsKI2R8yfXi_TP7QDz5MUg3DXMIUFva20w6U"/>
+</div>
+</div>
+<div class="bg-gradient-to-r from-blue-500/20 via-transparent to-yellow-400/20 h-[2px] w-full absolute bottom-0"></div>
+</header>
+<main class="min-h-screen pt-24 pb-32 px-4 md:px-12 flex flex-col items-center">
+<!-- Hero Section Title -->
+<div class="w-full max-w-5xl mb-12">
+<div class="flex items-center gap-2 mb-2">
+<span class="text-secondary text-sm font-label uppercase tracking-widest bg-secondary-container/10 px-2 py-1">Mission Log // Contact</span>
+<div class="flex-grow h-[1px] bg-outline-variant/30"></div>
+</div>
+<h1 class="text-6xl md:text-8xl font-black uppercase tracking-tighter text-on-background leading-none">
+                Promised <span class="text-primary italic">Killua</span>
+</h1>
+</div>
+<!-- Terminal Interface -->
+<div class="w-full max-w-5xl bg-surface-container-lowest border border-outline-variant/20 shadow-[0_0_50px_rgba(0,241,254,0.05)] relative overflow-hidden group">
+<!-- Terminal Header -->
+<div class="bg-surface-container-high px-4 py-2 flex items-center justify-between border-b border-outline-variant/20">
+<div class="flex gap-2">
+<div class="w-3 h-3 bg-error"></div>
+<div class="w-3 h-3 bg-tertiary"></div>
+<div class="w-3 h-3 bg-secondary-container"></div>
+</div>
+<div class="text-[10px] font-label text-outline uppercase tracking-widest">System_Access: Secure_Shell_v4.2</div>
+<div class="w-12"></div>
+</div>
+<!-- Terminal Content -->
+<div class="p-6 md:p-8 font-label text-sm md:text-base leading-relaxed min-h-[500px]">
+<div class="mb-6 space-y-1">
+<p class="text-outline">Zoldyck Network [Version 1.0.42-Godspeed]</p>
+<p class="text-outline">(c) 1999 Zoldyck Estate. All rights reserved.</p>
+</div>
+<!-- Command Sequence -->
+<div class="space-y-4">
+<div class="flex items-start gap-3">
+<span class="text-tertiary-fixed font-bold shrink-0">$&gt;</span>
+<p class="text-primary-fixed-dim">contact --killua</p>
+</div>
+<div class="pl-8 space-y-4 border-l-2 border-primary/20 py-2">
+<p class="text-secondary-container animate-pulse">[ANALYZING TARGET PARAMETERS...]</p>
+<p class="text-on-surface-variant">Identity Verified. Establishing encrypted uplink...</p>
+<!-- Contact Form Module -->
+<div class="bg-surface-container mt-8 border-l-4 border-secondary-container p-6 space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="block text-[10px] text-secondary font-bold uppercase tracking-widest">Client_Identity</label>
+<input class="w-full bg-surface-container-low border-b-2 border-primary p-3 text-on-surface focus:ring-0 focus:bg-surface-container-high transition-all font-label placeholder:text-outline-variant" placeholder="NAME / CODENAME" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block text-[10px] text-secondary font-bold uppercase tracking-widest">Return_Frequency</label>
+<input class="w-full bg-surface-container-low border-b-2 border-primary p-3 text-on-surface focus:ring-0 focus:bg-surface-container-high transition-all font-label placeholder:text-outline-variant" placeholder="ENCRYPTED_EMAIL" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block text-[10px] text-secondary font-bold uppercase tracking-widest">Mission_Briefing</label>
+<textarea class="w-full bg-surface-container-low border-b-2 border-primary p-3 text-on-surface focus:ring-0 focus:bg-surface-container-high transition-all font-label placeholder:text-outline-variant" placeholder="ENTER CONTRACT DETAILS OR MESSAGE..." rows="4"></textarea>
+</div>
+<div class="flex flex-col md:flex-row items-center justify-between gap-4">
+<p class="text-[10px] text-outline italic">Encryption: AES-256 | Status: Ready to transmit</p>
+<button class="bg-primary-container text-on-primary-fixed font-bold px-8 py-3 hover:bg-tertiary-fixed transition-all border-b-4 border-transparent hover:border-tertiary-fixed-dim uppercase tracking-tighter text-sm flex items-center gap-2 group/btn">
+                                    Transmit_Signal
+                                    <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform" data-icon="send">send</span>
+</button>
+</div>
+</div>
+<!-- External Links -->
+<div class="pt-6 flex flex-wrap gap-4">
+<a class="group flex items-center gap-2 bg-surface-container-high px-4 py-2 border border-outline-variant/30 hover:border-secondary-container transition-all" href="https://x.com/promisedkillua" target="_blank">
+<span class="text-secondary-container font-bold">@promisedkillua</span>
+<span class="material-symbols-outlined text-sm text-outline group-hover:text-secondary-container" data-icon="open_in_new">open_in_new</span>
+</a>
+<div class="px-4 py-2 border border-outline-variant/10 text-outline-variant cursor-not-allowed">
+                                SECURE_COMMS_002
+                            </div>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="text-tertiary-fixed font-bold shrink-0">$&gt;</span>
+<div class="w-2 h-5 bg-tertiary-fixed animate-[pulse_1s_infinite]"></div>
+</div>
+</div>
+</div>
+<!-- Terminal Footer Ticker -->
+<div class="bg-surface-container-lowest border-t border-outline-variant/20 px-6 py-3 flex items-center justify-between overflow-hidden">
+<div class="flex items-center gap-6 overflow-hidden whitespace-nowrap">
+<span class="text-secondary-container font-bold text-xs">SYSTEM_STATUS:</span>
+<div class="flex gap-8 text-[10px] font-label uppercase tracking-widest text-outline">
+<span class="flex items-center gap-2 text-tertiary-fixed"><span class="w-1.5 h-1.5 bg-tertiary-fixed"></span> [Online: Hunting Alpha]</span>
+<span class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-outline-variant"></span> [Status: Godspeed]</span>
+<span class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-outline-variant"></span> [Status: Accepting Contracts]</span>
+</div>
+</div>
+<div class="hidden md:block text-xs text-outline-variant font-label">UTC-5:PADOKIA</div>
+</div>
+<!-- Scanline Effect -->
+<div class="scanline opacity-50"></div>
+</div>
+<!-- Decorative Info Cards -->
+<div class="w-full max-w-5xl mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface-container-low p-6 border-l-2 border-primary">
+<h3 class="font-label text-xs text-primary uppercase mb-2">Location</h3>
+<p class="text-on-surface font-bold">Republic of Padokia</p>
+<p class="text-outline text-xs mt-1">Mt. Kukuroo Access Restricted</p>
+</div>
+<div class="bg-surface-container-low p-6 border-l-2 border-secondary-container">
+<h3 class="font-label text-xs text-secondary-container uppercase mb-2">Efficiency</h3>
+<p class="text-on-surface font-bold">99.9% Success Rate</p>
+<p class="text-outline text-xs mt-1">1,240 Missions Logged</p>
+</div>
+<div class="bg-surface-container-low p-6 border-l-2 border-tertiary-fixed">
+<h3 class="font-label text-xs text-tertiary-fixed uppercase mb-2">Power Mode</h3>
+<p class="text-on-surface font-bold">Godspeed Protocol</p>
+<p class="text-outline text-xs mt-1">Transmutation Active</p>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<footer class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 px-4 pb-safe bg-slate-950 border-t border-blue-900/30 shadow-[0_-4px_20px_rgba(0,241,254,0.05)]">
+<div class="flex flex-col items-center justify-center text-slate-600 font-mono text-[10px] uppercase JetBrains Mono hover:text-blue-200 transition-colors">
+<span class="material-symbols-outlined mb-1" data-icon="radar">radar</span>
+<span>STATUS: READY</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-600 font-mono text-[10px] uppercase JetBrains Mono hover:text-blue-200 transition-colors">
+<span class="material-symbols-outlined mb-1" data-icon="flash_on">flash_on</span>
+<span>GODSPEED: OFF</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-600 font-mono text-[10px] uppercase JetBrains Mono hover:text-blue-200 transition-colors">
+<span class="material-symbols-outlined mb-1" data-icon="category" style="font-variation-settings: 'FILL' 1;">category</span>
+<span>NEN: 100%</span>
+</div>
+<div class="flex flex-col items-center justify-center text-yellow-400 scale-110 font-mono text-[10px] uppercase JetBrains Mono">
+<span class="material-symbols-outlined mb-1" data-icon="terminal">terminal</span>
+<span>LOC: PADOKIA</span>
+</div>
+</footer>
+</body></html>
