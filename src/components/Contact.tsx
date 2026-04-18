@@ -16,6 +16,7 @@ const Contact = () => {
       {/* Terminal Interface */}
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
+        autoFocus={false}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         className="w-full max-w-5xl bg-surface-container-lowest border border-outline-variant/20 shadow-[0_0_50px_rgba(0,166,255,0.05)] relative overflow-hidden group"
