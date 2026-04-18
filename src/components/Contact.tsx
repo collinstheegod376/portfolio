@@ -13,7 +13,6 @@ const Contact = () => {
         </h1>
       </div>
 
-      {/* Terminal Interface */}
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
         autoFocus={false}

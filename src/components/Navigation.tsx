@@ -19,7 +19,6 @@ const Navigation = ({ activeTab, setActiveTab }: NavigationProps) => {
   return (
     <header className="fixed top-0 w-full z-50 px-4 md:px-6 py-4 md:py-6 flex justify-center items-center pointer-events-none">
       
-      {/* Desktop Navigation */}
       <nav className="hidden md:flex glass rounded-full px-8 py-4 items-center space-x-12 pointer-events-auto">
         {tabs.map((tab) => (
           <button
@@ -42,7 +41,6 @@ const Navigation = ({ activeTab, setActiveTab }: NavigationProps) => {
         ))}
       </nav>
 
-      {/* Mobile Toggle Button */}
       <div className="md:hidden w-full flex justify-end pointer-events-auto">
         <button 
           onClick={() => setIsOpen(!isOpen)} 
@@ -52,7 +50,6 @@ const Navigation = ({ activeTab, setActiveTab }: NavigationProps) => {
         </button>
       </div>
 
-      {/* Mobile Dropdown */}
       <AnimatePresence>
         {isOpen && (
           <motion.div 

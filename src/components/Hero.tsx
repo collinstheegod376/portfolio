@@ -41,7 +41,6 @@ const Hero = ({ setActiveTab }: { setActiveTab: (tab: string) => void }) => {
           </div>
         </motion.div>
 
-        {/* Info & Stats Section */}
         <motion.div
            initial={{ opacity: 0, y: 30 }}
            animate={{ opacity: 1, y: 0 }}
@@ -50,13 +49,13 @@ const Hero = ({ setActiveTab }: { setActiveTab: (tab: string) => void }) => {
         >
            <div className="glass-card flex flex-col items-center justify-center p-6 md:p-8 rounded-3xl pointer-events-auto hover:-translate-y-1 transition-transform duration-300 border border-glass-border hover:border-primary/30 group">
              <span className="material-symbols-outlined text-primary/50 text-3xl mb-3 group-hover:text-primary transition-colors">code</span>
-             <span className="text-4xl font-black text-white tracking-tighter">15+</span>
+             <span className="text-4xl font-black text-white tracking-tighter">3</span>
              <span className="text-xs uppercase tracking-widest text-on-surface-variant mt-2 font-headline font-medium">Projects</span>
            </div>
 
            <div className="glass-card flex flex-col items-center justify-center p-6 md:p-8 rounded-3xl pointer-events-auto hover:-translate-y-1 transition-transform duration-300 border border-glass-border hover:border-primary/30 group">
              <span className="material-symbols-outlined text-primary/50 text-3xl mb-3 group-hover:text-primary transition-colors">speed</span>
-             <span className="text-4xl font-black text-white tracking-tighter">100</span>
+             <span className="text-4xl font-black text-white tracking-tighter">20</span>
              <span className="text-xs uppercase tracking-widest text-on-surface-variant mt-2 font-headline font-medium">Lighthouse</span>
            </div>
 
@@ -68,7 +67,7 @@ const Hero = ({ setActiveTab }: { setActiveTab: (tab: string) => void }) => {
 
            <div className="glass-card flex flex-col items-center justify-center p-6 md:p-8 rounded-3xl pointer-events-auto hover:-translate-y-1 transition-transform duration-300 border border-glass-border hover:border-primary/30 group">
              <span className="material-symbols-outlined text-primary/50 text-3xl mb-3 group-hover:text-primary transition-colors">diamond</span>
-             <span className="text-4xl font-black text-white tracking-tighter">10k+</span>
+             <span className="text-4xl font-black text-white tracking-tighter">100</span>
              <span className="text-xs uppercase tracking-widest text-on-surface-variant mt-2 font-headline font-medium">Commits</span>
            </div>
         </motion.div>

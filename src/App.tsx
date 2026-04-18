@@ -28,7 +28,6 @@ function App() {
 
   return (
     <div className="min-h-screen relative font-body text-on-background overflow-hidden selection:bg-primary-light selection:text-white">
-      {/* Background orbs */}
       <div className="fixed top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-primary-glow blur-[120px] mix-blend-screen opacity-50 animate-blob pointer-events-none"></div>
       <div className="fixed top-[20%] right-[-10%] w-[30%] h-[40%] rounded-full bg-[rgba(59,130,246,0.3)] blur-[100px] mix-blend-screen opacity-50 animate-blob pointer-events-none" style={{ animationDelay: '2s' }}></div>
       <div className="fixed bottom-[-10%] left-[20%] w-[35%] h-[40%] rounded-full bg-[rgba(147,197,253,0.2)] blur-[120px] mix-blend-screen opacity-40 animate-blob pointer-events-none" style={{ animationDelay: '4s' }}></div>
