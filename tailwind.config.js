@@ -31,15 +31,14 @@ export default {
         "3xl": "1.5rem",
       },
       animation: {
-        'blob': 'blob 7s infinite',
+        'blob': 'blob 12s infinite cubic-bezier(0.4, 0, 0.2, 1)',
         'fade-in': 'fadeIn 0.5s ease-out',
       },
       keyframes: {
         blob: {
-          '0%': { transform: 'translate(0px, 0px) scale(1)' },
-          '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
-          '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
-          '100%': { transform: 'translate(0px, 0px) scale(1)' },
+          '0%, 100%': { transform: 'translate(0px, 0px) scale(1)', borderRadius: '40% 60% 70% 30% / 40% 50% 60% 50%' },
+          '33%': { transform: 'translate(50px, -50px) scale(1.1)', borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%' },
+          '66%': { transform: 'translate(-40px, 40px) scale(0.9)', borderRadius: '30% 60% 70% 40% / 50% 60% 30% 60%' },
         },
         fadeIn: {
           '0%': { opacity: '0', transform: 'translateY(10px)' },

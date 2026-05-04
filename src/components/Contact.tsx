@@ -91,9 +91,13 @@ const Contact = () => {
               </form>
 
               <div className="pt-8 flex flex-wrap gap-4 relative z-10">
-                <a className="group flex items-center gap-2 bg-surface-container-high px-4 py-2 border border-outline-variant/30 hover:border-secondary-container transition-all" href="https://x.com/promisedkillua" target="_blank" rel="noreferrer">
+                <a className="group flex items-center gap-2 bg-surface-container-high px-4 py-2 border border-outline-variant/30 hover:border-secondary-container transition-all duration-300" href="https://x.com/promisedkillua" target="_blank" rel="noreferrer">
                   <span className="text-secondary-container font-bold text-sm">@promisedkillua</span>
                   <span className="material-symbols-outlined text-sm text-outline group-hover:text-secondary-container">open_in_new</span>
+                </a>
+                <a className="group flex items-center gap-2 bg-surface-container-high px-4 py-2 border border-outline-variant/30 hover:border-primary transition-all duration-300" href="https://t.me/killua_journal" target="_blank" rel="noreferrer">
+                  <span className="text-primary font-bold text-sm">Telegram Journal</span>
+                  <span className="material-symbols-outlined text-sm text-outline group-hover:text-primary">open_in_new</span>
                 </a>
                 <div className="px-4 py-2 border border-outline-variant/10 text-outline-variant cursor-not-allowed text-sm flex items-center gap-2">
                   <span className="material-symbols-outlined text-sm">lock</span>

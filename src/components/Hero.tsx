@@ -13,7 +13,7 @@ const Hero = ({ setActiveTab }: { setActiveTab: (tab: string) => void }) => {
           <div className="inline-block px-6 py-2 glass-card rounded-full border border-primary/20 bg-primary/5">
             <span className="font-headline text-sm font-medium text-primary-light flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-primary-light animate-pulse shadow-[0_0_8px_rgba(96,165,250,0.8)]"></span>
-              Full-Stack Developer & UI Designer
+              Full-Stack Developer
             </span>
           </div>
           

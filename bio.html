@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>ZOLDYCK_OS // PROMISED KILLUA</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&amp;family=JetBrains+Mono:wght@400;700&amp;family=Space+Grotesk:wght@400;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title> PROMISED KILLUA</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&amp;family=JetBrains+Mono:wght@400;700&amp;family=Space+Grotesk:wght@400;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -67,12 +75,12 @@
                         "body": ["Inter"],
                         "label": ["JetBrains Mono"]
                     },
-                    borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+                    borderRadius: { "DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px" },
                 },
             },
         }
     </script>
-<style>
+    <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
             display: inline-block;
@@ -83,17 +91,23 @@
             white-space: nowrap;
             direction: ltr;
         }
+
         .lightning-path {
             stroke-dasharray: 1000;
             stroke-dashoffset: 1000;
             animation: dash 2s linear infinite;
         }
+
         @keyframes dash {
-            to { stroke-dashoffset: 0; }
+            to {
+                stroke-dashoffset: 0;
+            }
         }
+
         .glitch-border {
             position: relative;
         }
+
         .glitch-border::after {
             content: '';
             position: absolute;
@@ -105,227 +119,289 @@
             transform: scaleX(0);
             transition: transform 0.2s steps(4);
         }
+
         .glitch-border:hover::after {
             transform: scaleX(1);
         }
     </style>
 </head>
-<body class="bg-surface text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container overflow-x-hidden">
-<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-slate-950/80 backdrop-blur-xl shadow-[0_0_20px_rgba(150,204,255,0.1)]">
-<div class="text-2xl font-black italic text-blue-400 tracking-[0.2em] font-headline">ZOLDYCK_OS</div>
-<nav class="hidden md:flex gap-8 items-center">
-<a class="font-extrabold uppercase tracking-tighter text-slate-500 hover:text-blue-300 transition-colors" href="#">MISSIONS</a>
-<a class="font-extrabold uppercase tracking-tighter text-slate-500 hover:text-blue-300 transition-colors" href="#">TECHNIQUES</a>
-<a class="font-extrabold uppercase tracking-tighter text-yellow-400 border-b-2 border-yellow-400 pb-1" href="#">BIO</a>
-<a class="font-extrabold uppercase tracking-tighter text-slate-500 hover:text-blue-300 transition-colors" href="#">TERMINAL</a>
-</nav>
-<div class="flex items-center gap-4">
-<span class="material-symbols-outlined text-blue-400 cursor-pointer hover:bg-blue-500/10 p-2">bolt</span>
-<span class="material-symbols-outlined text-blue-400 cursor-pointer hover:bg-blue-500/10 p-2">settings_input_component</span>
-<div class="w-10 h-10 bg-surface-container-high border border-primary/20 flex items-center justify-center">
-<img alt="Zoldyck Family Seal" class="w-8 h-8 opacity-80" data-alt="Stylized geometric family crest emblem representing electricity and precision on a dark metallic background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCa4jUxEMsuMYKm-mRUkj6-Bk__AMUV0OnXv_n7PjjSUoA4QTRVauE4F5a3J7GF2gCbzNrBB7slsXD6YgKn-q1ePLmDeMylmXyiLWvl16iKSy-Q3ToYnSII3VPOLO2TebfJEORZ2C5wIPFTfmEDtpqivBhEC7wAbxJw_8xtReIw6BQ4jkBHQ7HiTuSI3MYG6F8V0P6ap9N6WdP7D-a5M2HfDlQMput05gsF47hUIk0PtKIjHOE-_JlaXKkDKrfuz_Uwq9sjlvgtBjk"/>
-</div>
-</div>
-<div class="bg-gradient-to-r from-blue-500/20 via-transparent to-yellow-400/20 h-[2px] w-full absolute bottom-0"></div>
-</header>
-<main class="pt-24 pb-32 px-6 max-w-7xl mx-auto space-y-24">
-<section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-<div class="lg:col-span-5 space-y-6">
-<div class="inline-block px-3 py-1 bg-primary/10 border-l-4 border-primary text-primary font-label text-xs tracking-widest uppercase">
+
+<body
+    class="bg-surface text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container overflow-x-hidden">
+    <header
+        class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-slate-950/80 backdrop-blur-xl shadow-[0_0_20px_rgba(150,204,255,0.1)]">
+        <div class="text-2xl font-black italic text-blue-400 tracking-[0.2em] font-headline">ZOLDYCK_OS</div>
+        <nav class="hidden md:flex gap-8 items-center">
+            <a class="font-extrabold uppercase tracking-tighter text-slate-500 hover:text-blue-300 transition-colors"
+                href="#">MISSIONS</a>
+            <a class="font-extrabold uppercase tracking-tighter text-slate-500 hover:text-blue-300 transition-colors"
+                href="#">TECHNIQUES</a>
+            <a class="font-extrabold uppercase tracking-tighter text-yellow-400 border-b-2 border-yellow-400 pb-1"
+                href="#">BIO</a>
+            <a class="font-extrabold uppercase tracking-tighter text-slate-500 hover:text-blue-300 transition-colors"
+                href="#">TERMINAL</a>
+        </nav>
+        <div class="flex items-center gap-4">
+            <span class="material-symbols-outlined text-blue-400 cursor-pointer hover:bg-blue-500/10 p-2">bolt</span>
+            <span
+                class="material-symbols-outlined text-blue-400 cursor-pointer hover:bg-blue-500/10 p-2">settings_input_component</span>
+            <div class="w-10 h-10 bg-surface-container-high border border-primary/20 flex items-center justify-center">
+                <img alt="Zoldyck Family Seal" class="w-8 h-8 opacity-80"
+                    data-alt="Stylized geometric family crest emblem representing electricity and precision on a dark metallic background"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCa4jUxEMsuMYKm-mRUkj6-Bk__AMUV0OnXv_n7PjjSUoA4QTRVauE4F5a3J7GF2gCbzNrBB7slsXD6YgKn-q1ePLmDeMylmXyiLWvl16iKSy-Q3ToYnSII3VPOLO2TebfJEORZ2C5wIPFTfmEDtpqivBhEC7wAbxJw_8xtReIw6BQ4jkBHQ7HiTuSI3MYG6F8V0P6ap9N6WdP7D-a5M2HfDlQMput05gsF47hUIk0PtKIjHOE-_JlaXKkDKrfuz_Uwq9sjlvgtBjk" />
+            </div>
+        </div>
+        <div
+            class="bg-gradient-to-r from-blue-500/20 via-transparent to-yellow-400/20 h-[2px] w-full absolute bottom-0">
+        </div>
+    </header>
+    <main class="pt-24 pb-32 px-6 max-w-7xl mx-auto space-y-24">
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <div class="lg:col-span-5 space-y-6">
+                <div
+                    class="inline-block px-3 py-1 bg-primary/10 border-l-4 border-primary text-primary font-label text-xs tracking-widest uppercase">
                     Subject ID: 003-KILLUA
                 </div>
-<h1 class="text-6xl md:text-8xl font-black tracking-tighter uppercase leading-[0.8] text-on-surface">
-                    Promised <br/>
-<span class="text-primary-container">Killua</span>
-</h1>
-<div class="p-6 bg-surface-container-lowest border-l-2 border-tertiary-fixed relative overflow-hidden">
-<div class="absolute top-0 right-0 p-2 opacity-10">
-<span class="material-symbols-outlined text-6xl">terminal</span>
-</div>
-<p class="text-xl font-medium leading-relaxed max-w-md">
-                        Web dev by day, degen by night. DM if u got alpha (or chocolate) – any works atp. And follow me too btw xoxo.
+                <h1 class="text-6xl md:text-8xl font-black tracking-tighter uppercase leading-[0.8] text-on-surface">
+                    Promised <br />
+                    <span class="text-primary-container">Killua</span>
+                </h1>
+                <div class="p-6 bg-surface-container-lowest border-l-2 border-tertiary-fixed relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-2 opacity-10">
+                        <span class="material-symbols-outlined text-6xl">terminal</span>
+                    </div>
+                    <p class="text-xl font-medium leading-relaxed max-w-md">
+                        Web dev by day, degen by night. DM if u got alpha (or chocolate) – any works atp. And follow me
+                        too btw xoxo.
                     </p>
-</div>
-<div class="flex gap-4">
-<button class="px-8 py-4 bg-primary-container text-on-primary-fixed font-bold uppercase tracking-widest glitch-border transition-all hover:brightness-110">
+                </div>
+                <div class="flex gap-4">
+                    <button
+                        class="px-8 py-4 bg-primary-container text-on-primary-fixed font-bold uppercase tracking-widest glitch-border transition-all hover:brightness-110">
                         ESTABLISH CONNECTION
                     </button>
-<button class="px-8 py-4 border border-outline/20 text-primary font-bold uppercase tracking-widest hover:bg-primary/5 transition-all">
+                    <button
+                        class="px-8 py-4 border border-outline/20 text-primary font-bold uppercase tracking-widest hover:bg-primary/5 transition-all">
                         VIEW LEDGER
                     </button>
-</div>
-</div>
-<div class="lg:col-span-7 relative group">
-<div class="aspect-video bg-surface-container-low overflow-hidden relative">
-<img alt="Killua Visualization" class="w-full h-full object-cover grayscale brightness-50 contrast-125" data-alt="Atmospheric dark cinematic shot of a silhouetted figure standing in a futuristic neon blue rain-slicked alleyway with electric sparks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1u8DIkdYLIZfdWPAldhXb41WlVBIowXCmiC9hAkfVCHIrMII8sRkCwvwtb8U5wnMJlSnfSOfABPIBdnY_Y9FBQ3I5GoL3M21cIZ1xYZJH_nlKwkTuQbiDETmwcZNk7OCB70ZGFQvgXSEPj6L5Lsdc5C6frK5LL09D2spj8pSklrp1e63jZXFYUXHeRSvgYIi1cGuvUssBmrl8LdBGSUWW3DUs7kcFxSE3w8ffQEGY4Ia8KlxLmmd1Iv3jQkdKYvJ3Ei1FHu9gEng"/>
-<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
-<div class="absolute top-4 left-4 font-label text-[10px] text-secondary-container space-y-1">
-<div class="flex items-center gap-2"><span class="w-2 h-2 bg-secondary-container animate-pulse"></span> SYSTEM: ACTIVE</div>
-<div class="flex items-center gap-2"><span class="w-2 h-2 bg-tertiary-fixed animate-pulse"></span> NEN_LEVEL: OVERFLOW</div>
-</div>
-<div class="absolute bottom-8 right-8 cursor-pointer group/choc" onclick="this.querySelector('.msg').classList.remove('hidden'); setTimeout(() =&gt; this.querySelector('.msg').classList.add('hidden'), 2000)">
-<div class="bg-surface-container-highest p-4 border-2 border-tertiary-fixed shadow-[0_0_15px_rgba(245,229,107,0.3)] hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-tertiary-fixed text-4xl">bakery_dining</span>
-</div>
-<div class="hidden msg absolute -top-16 right-0 w-48 p-2 bg-tertiary-fixed text-on-tertiary font-label text-[10px] font-bold uppercase animate-bounce">
+                </div>
+            </div>
+            <div class="lg:col-span-7 relative group">
+                <div class="aspect-video bg-surface-container-low overflow-hidden relative">
+                    <img alt="Killua Visualization"
+                        class="w-full h-full object-cover grayscale brightness-50 contrast-125"
+                        data-alt="Atmospheric dark cinematic shot of a silhouetted figure standing in a futuristic neon blue rain-slicked alleyway with electric sparks"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1u8DIkdYLIZfdWPAldhXb41WlVBIowXCmiC9hAkfVCHIrMII8sRkCwvwtb8U5wnMJlSnfSOfABPIBdnY_Y9FBQ3I5GoL3M21cIZ1xYZJH_nlKwkTuQbiDETmwcZNk7OCB70ZGFQvgXSEPj6L5Lsdc5C6frK5LL09D2spj8pSklrp1e63jZXFYUXHeRSvgYIi1cGuvUssBmrl8LdBGSUWW3DUs7kcFxSE3w8ffQEGY4Ia8KlxLmmd1Iv3jQkdKYvJ3Ei1FHu9gEng" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+                    <div class="absolute top-4 left-4 font-label text-[10px] text-secondary-container space-y-1">
+                        <div class="flex items-center gap-2"><span
+                                class="w-2 h-2 bg-secondary-container animate-pulse"></span> SYSTEM: ACTIVE</div>
+                        <div class="flex items-center gap-2"><span
+                                class="w-2 h-2 bg-tertiary-fixed animate-pulse"></span> NEN_LEVEL: OVERFLOW</div>
+                    </div>
+                    <div class="absolute bottom-8 right-8 cursor-pointer group/choc"
+                        onclick="this.querySelector('.msg').classList.remove('hidden'); setTimeout(() =&gt; this.querySelector('.msg').classList.add('hidden'), 2000)">
+                        <div
+                            class="bg-surface-container-highest p-4 border-2 border-tertiary-fixed shadow-[0_0_15px_rgba(245,229,107,0.3)] hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-tertiary-fixed text-4xl">bakery_dining</span>
+                        </div>
+                        <div
+                            class="hidden msg absolute -top-16 right-0 w-48 p-2 bg-tertiary-fixed text-on-tertiary font-label text-[10px] font-bold uppercase animate-bounce">
                             +1 Chocolate. Power level rising
                         </div>
-</div>
-</div>
-<div class="absolute -top-2 -right-2 w-12 h-12 border-t-2 border-r-2 border-primary"></div>
-<div class="absolute -bottom-2 -left-2 w-12 h-12 border-b-2 border-l-2 border-secondary-container"></div>
-</div>
-</section>
-<section class="space-y-12">
-<div class="flex items-end justify-between border-b border-outline-variant/30 pb-4">
-<h2 class="text-3xl font-black uppercase tracking-tighter flex items-center gap-3">
-<span class="text-secondary-container material-symbols-outlined">bolt</span>
+                    </div>
+                </div>
+                <div class="absolute -top-2 -right-2 w-12 h-12 border-t-2 border-r-2 border-primary"></div>
+                <div class="absolute -bottom-2 -left-2 w-12 h-12 border-b-2 border-l-2 border-secondary-container">
+                </div>
+            </div>
+        </section>
+        <section class="space-y-12">
+            <div class="flex items-end justify-between border-b border-outline-variant/30 pb-4">
+                <h2 class="text-3xl font-black uppercase tracking-tighter flex items-center gap-3">
+                    <span class="text-secondary-container material-symbols-outlined">bolt</span>
                     Nen Techniques // Assassin Arsenal
                 </h2>
-<div class="font-label text-xs text-outline tracking-[0.3em]">VERSION_4.02.0</div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 bg-outline-variant/10">
-<div class="p-8 border border-outline-variant/20 relative group hover:bg-surface-container-high transition-colors">
-<div class="absolute top-0 right-0 font-label text-[10px] p-2 text-outline">001</div>
-<div class="space-y-4">
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary transition-all">
-<span class="material-symbols-outlined text-3xl">deployed_code</span>
-</div>
-<h3 class="font-bold text-xl uppercase tracking-widest">REACT.js</h3>
-</div>
-<p class="text-sm text-on-surface-variant font-medium">Core engine for high-speed tactical interfaces. Component-based lethality.</p>
-<div class="h-1 bg-surface-container-lowest w-full overflow-hidden">
-<div class="h-full bg-primary-container w-[92%]"></div>
-</div>
-</div>
-</div>
-<div class="p-8 border border-outline-variant/20 relative group hover:bg-surface-container-high transition-colors bg-surface-container-low">
-<div class="absolute top-0 right-0 font-label text-[10px] p-2 text-outline">002</div>
-<div class="space-y-4">
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 bg-secondary-container/10 flex items-center justify-center text-secondary-container group-hover:bg-secondary-container group-hover:text-on-secondary transition-all">
-<span class="material-symbols-outlined text-3xl">currency_bitcoin</span>
-</div>
-<h3 class="font-bold text-xl uppercase tracking-widest text-secondary-container">SOLIDITY</h3>
-</div>
-<p class="text-sm text-on-surface-variant font-medium">Smart contract precision. Immutable logic executed on the digital battlefield.</p>
-<div class="h-1 bg-surface-container-lowest w-full overflow-hidden">
-<div class="h-full bg-secondary-container w-[85%]"></div>
-</div>
-</div>
-</div>
-<div class="p-8 border border-outline-variant/20 relative group hover:bg-surface-container-high transition-colors">
-<div class="absolute top-0 right-0 font-label text-[10px] p-2 text-outline">003</div>
-<div class="space-y-4">
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 bg-tertiary-fixed/10 flex items-center justify-center text-tertiary-fixed group-hover:bg-tertiary-fixed group-hover:text-on-tertiary transition-all">
-<span class="material-symbols-outlined text-3xl">grid_view</span>
-</div>
-<h3 class="font-bold text-xl uppercase tracking-widest text-tertiary-fixed">TAILWIND</h3>
-</div>
-<p class="text-sm text-on-surface-variant font-medium">Rapid structural deployment. Utility-first minimalism at 0px radius.</p>
-<div class="h-1 bg-surface-container-lowest w-full overflow-hidden">
-<div class="h-full bg-tertiary-fixed w-[98%]"></div>
-</div>
-</div>
-</div>
-<div class="p-8 border border-outline-variant/20 relative group hover:bg-surface-container-high transition-colors bg-surface-container-low">
-<div class="absolute top-0 right-0 font-label text-[10px] p-2 text-outline">004</div>
-<div class="space-y-4">
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary transition-all">
-<span class="material-symbols-outlined text-3xl">motion_mode</span>
-</div>
-<h3 class="font-bold text-xl uppercase tracking-widest">FRAMER MOTION</h3>
-</div>
-<p class="text-sm text-on-surface-variant font-medium">Fluidity of movement. Transitioning between states with Godspeed speed.</p>
-<div class="h-1 bg-surface-container-lowest w-full overflow-hidden">
-<div class="h-full bg-primary-container w-[78%]"></div>
-</div>
-</div>
-</div>
-<div class="p-8 border border-outline-variant/20 relative group hover:bg-surface-container-high transition-colors">
-<div class="absolute top-0 right-0 font-label text-[10px] p-2 text-outline">005</div>
-<div class="space-y-4">
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 bg-secondary-container/10 flex items-center justify-center text-secondary-container group-hover:bg-secondary-container group-hover:text-on-secondary transition-all">
-<span class="material-symbols-outlined text-3xl">hub</span>
-</div>
-<h3 class="font-bold text-xl uppercase tracking-widest text-secondary-container">NODE.js</h3>
-</div>
-<p class="text-sm text-on-surface-variant font-medium">Central nervous system. Handling asynchronous data streams with zero latency.</p>
-<div class="h-1 bg-surface-container-lowest w-full overflow-hidden">
-<div class="h-full bg-secondary-container w-[89%]"></div>
-</div>
-</div>
-</div>
-<div class="p-8 border border-outline-variant/20 relative group hover:bg-surface-container-high transition-colors bg-surface-container-low">
-<div class="absolute top-0 right-0 font-label text-[10px] p-2 text-outline">006</div>
-<div class="space-y-4">
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 bg-tertiary-fixed/10 flex items-center justify-center text-tertiary-fixed group-hover:bg-tertiary-fixed group-hover:text-on-tertiary transition-all">
-<span class="material-symbols-outlined text-3xl">terminal</span>
-</div>
-<h3 class="font-bold text-xl uppercase tracking-widest text-tertiary-fixed">ASSASSIN MODE</h3>
-</div>
-<p class="text-sm text-on-surface-variant font-medium">The default state. Debugging protocols and lethal efficiency in the dark.</p>
-<div class="h-1 bg-surface-container-lowest w-full overflow-hidden">
-<div class="h-full bg-tertiary-fixed w-[100%] animate-pulse"></div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="grid grid-cols-1 md:grid-cols-4 gap-4">
-<div class="md:col-span-2 p-8 bg-surface-container-high border-b-4 border-primary relative overflow-hidden group">
-<div class="absolute inset-0 opacity-5 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
-<h4 class="font-label text-xs text-primary mb-4">// CURRENT_LOCATION</h4>
-<p class="text-3xl font-black uppercase tracking-tighter">PADOKIA MOUNTAIN, REPUBLIC OF PADOKIA</p>
-<div class="mt-8 flex items-center gap-4 font-label text-[10px] text-on-surface-variant">
-<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 bg-secondary-container rounded-full animate-ping"></span> UPLINK_STABLE</span>
-<span>LAT: 34.221</span>
-<span>LONG: -118.452</span>
-</div>
-</div>
-<div class="md:col-span-1 p-8 bg-surface-container border-b-4 border-secondary-container hover:bg-surface-container-high transition-colors cursor-pointer">
-<h4 class="font-label text-xs text-secondary-container mb-4">// ALPHA_INTEL</h4>
-<div class="space-y-2">
-<div class="h-1 bg-secondary-container/20 w-full"></div>
-<div class="h-1 bg-secondary-container/20 w-3/4"></div>
-<div class="h-1 bg-secondary-container/20 w-1/2"></div>
-</div>
-<p class="mt-4 text-xs font-bold uppercase tracking-widest text-secondary-container">ENCRYPTED DATA FEED</p>
-</div>
-<div class="md:col-span-1 p-8 bg-tertiary-fixed text-on-tertiary border-b-4 border-on-tertiary hover:scale-[0.98] transition-transform cursor-pointer">
-<h4 class="font-label text-xs font-bold mb-4">// TRANSMISSION</h4>
-<div class="flex flex-col h-full justify-between">
-<p class="text-lg font-black leading-none uppercase">FOLLOW ME <br/> OR DIE <br/> (XOXO)</p>
-<span class="material-symbols-outlined text-4xl mt-4">trending_flat</span>
-</div>
-</div>
-</section>
-</main>
-<footer class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 px-4 pb-safe bg-slate-950 border-t border-blue-900/30 shadow-[0_-4px_20px_rgba(0,241,254,0.05)]">
-<div class="flex flex-col items-center justify-center text-slate-600 hover:text-blue-200 transition-colors cursor-pointer font-label text-[10px] uppercase">
-<span class="material-symbols-outlined">radar</span>
-<span>STATUS: READY</span>
-</div>
-<div class="flex flex-col items-center justify-center text-slate-600 hover:text-blue-200 transition-colors cursor-pointer font-label text-[10px] uppercase">
-<span class="material-symbols-outlined">flash_on</span>
-<span>GODSPEED: OFF</span>
-</div>
-<div class="flex flex-col items-center justify-center text-yellow-400 scale-110 font-label text-[10px] uppercase">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">category</span>
-<span>NEN: 100%</span>
-</div>
-<div class="flex flex-col items-center justify-center text-slate-600 hover:text-blue-200 transition-colors cursor-pointer font-label text-[10px] uppercase">
-<span class="material-symbols-outlined">terminal</span>
-<span>LOC: PADOKIA</span>
-</div>
-</footer>
-<div class="fixed left-0 top-0 h-full w-1 bg-slate-900/50 z-40">
-<div class="w-full h-1/4 bg-primary animate-pulse"></div>
-<div class="w-full h-1 bg-secondary-container absolute top-1/2 shadow-[0_0_10px_#00f1fe]"></div>
-</div>
-</body></html>
+                <div class="font-label text-xs text-outline tracking-[0.3em]">VERSION_4.02.0</div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 bg-outline-variant/10">
+                <div
+                    class="p-8 border border-outline-variant/20 relative group hover:bg-surface-container-high transition-colors">
+                    <div class="absolute top-0 right-0 font-label text-[10px] p-2 text-outline">001</div>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary transition-all">
+                                <span class="material-symbols-outlined text-3xl">deployed_code</span>
+                            </div>
+                            <h3 class="font-bold text-xl uppercase tracking-widest">REACT.js</h3>
+                        </div>
+                        <p class="text-sm text-on-surface-variant font-medium">Core engine for high-speed tactical
+                            interfaces. Component-based lethality.</p>
+                        <div class="h-1 bg-surface-container-lowest w-full overflow-hidden">
+                            <div class="h-full bg-primary-container w-[92%]"></div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="p-8 border border-outline-variant/20 relative group hover:bg-surface-container-high transition-colors bg-surface-container-low">
+                    <div class="absolute top-0 right-0 font-label text-[10px] p-2 text-outline">002</div>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-secondary-container/10 flex items-center justify-center text-secondary-container group-hover:bg-secondary-container group-hover:text-on-secondary transition-all">
+                                <span class="material-symbols-outlined text-3xl">currency_bitcoin</span>
+                            </div>
+                            <h3 class="font-bold text-xl uppercase tracking-widest text-secondary-container">SOLIDITY
+                            </h3>
+                        </div>
+                        <p class="text-sm text-on-surface-variant font-medium">Smart contract precision. Immutable logic
+                            executed on the digital battlefield.</p>
+                        <div class="h-1 bg-surface-container-lowest w-full overflow-hidden">
+                            <div class="h-full bg-secondary-container w-[85%]"></div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="p-8 border border-outline-variant/20 relative group hover:bg-surface-container-high transition-colors">
+                    <div class="absolute top-0 right-0 font-label text-[10px] p-2 text-outline">003</div>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-tertiary-fixed/10 flex items-center justify-center text-tertiary-fixed group-hover:bg-tertiary-fixed group-hover:text-on-tertiary transition-all">
+                                <span class="material-symbols-outlined text-3xl">grid_view</span>
+                            </div>
+                            <h3 class="font-bold text-xl uppercase tracking-widest text-tertiary-fixed">TAILWIND</h3>
+                        </div>
+                        <p class="text-sm text-on-surface-variant font-medium">Rapid structural deployment.
+                            Utility-first minimalism at 0px radius.</p>
+                        <div class="h-1 bg-surface-container-lowest w-full overflow-hidden">
+                            <div class="h-full bg-tertiary-fixed w-[98%]"></div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="p-8 border border-outline-variant/20 relative group hover:bg-surface-container-high transition-colors bg-surface-container-low">
+                    <div class="absolute top-0 right-0 font-label text-[10px] p-2 text-outline">004</div>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary transition-all">
+                                <span class="material-symbols-outlined text-3xl">motion_mode</span>
+                            </div>
+                            <h3 class="font-bold text-xl uppercase tracking-widest">FRAMER MOTION</h3>
+                        </div>
+                        <p class="text-sm text-on-surface-variant font-medium">Fluidity of movement. Transitioning
+                            between states with Godspeed speed.</p>
+                        <div class="h-1 bg-surface-container-lowest w-full overflow-hidden">
+                            <div class="h-full bg-primary-container w-[78%]"></div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="p-8 border border-outline-variant/20 relative group hover:bg-surface-container-high transition-colors">
+                    <div class="absolute top-0 right-0 font-label text-[10px] p-2 text-outline">005</div>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-secondary-container/10 flex items-center justify-center text-secondary-container group-hover:bg-secondary-container group-hover:text-on-secondary transition-all">
+                                <span class="material-symbols-outlined text-3xl">hub</span>
+                            </div>
+                            <h3 class="font-bold text-xl uppercase tracking-widest text-secondary-container">NODE.js
+                            </h3>
+                        </div>
+                        <p class="text-sm text-on-surface-variant font-medium">Central nervous system. Handling
+                            asynchronous data streams with zero latency.</p>
+                        <div class="h-1 bg-surface-container-lowest w-full overflow-hidden">
+                            <div class="h-full bg-secondary-container w-[89%]"></div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="p-8 border border-outline-variant/20 relative group hover:bg-surface-container-high transition-colors bg-surface-container-low">
+                    <div class="absolute top-0 right-0 font-label text-[10px] p-2 text-outline">006</div>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-tertiary-fixed/10 flex items-center justify-center text-tertiary-fixed group-hover:bg-tertiary-fixed group-hover:text-on-tertiary transition-all">
+                                <span class="material-symbols-outlined text-3xl">terminal</span>
+                            </div>
+                            <h3 class="font-bold text-xl uppercase tracking-widest text-tertiary-fixed">ASSASSIN MODE
+                            </h3>
+                        </div>
+                        <p class="text-sm text-on-surface-variant font-medium">The default state. Debugging protocols
+                            and lethal efficiency in the dark.</p>
+                        <div class="h-1 bg-surface-container-lowest w-full overflow-hidden">
+                            <div class="h-full bg-tertiary-fixed w-[100%] animate-pulse"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div
+                class="md:col-span-2 p-8 bg-surface-container-high border-b-4 border-primary relative overflow-hidden group">
+                <div
+                    class="absolute inset-0 opacity-5 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]">
+                </div>
+                <h4 class="font-label text-xs text-primary mb-4">// CURRENT_LOCATION</h4>
+                <p class="text-3xl font-black uppercase tracking-tighter">PADOKIA MOUNTAIN, REPUBLIC OF PADOKIA</p>
+                <div class="mt-8 flex items-center gap-4 font-label text-[10px] text-on-surface-variant">
+                    <span class="flex items-center gap-1"><span
+                            class="w-1.5 h-1.5 bg-secondary-container rounded-full animate-ping"></span>
+                        UPLINK_STABLE</span>
+                    <span>LAT: 34.221</span>
+                    <span>LONG: -118.452</span>
+                </div>
+            </div>
+            <div
+                class="md:col-span-1 p-8 bg-surface-container border-b-4 border-secondary-container hover:bg-surface-container-high transition-colors cursor-pointer">
+                <h4 class="font-label text-xs text-secondary-container mb-4">// ALPHA_INTEL</h4>
+                <div class="space-y-2">
+                    <div class="h-1 bg-secondary-container/20 w-full"></div>
+                    <div class="h-1 bg-secondary-container/20 w-3/4"></div>
+                    <div class="h-1 bg-secondary-container/20 w-1/2"></div>
+                </div>
+                <p class="mt-4 text-xs font-bold uppercase tracking-widest text-secondary-container">ENCRYPTED DATA FEED
+                </p>
+            </div>
+            <div
+                class="md:col-span-1 p-8 bg-tertiary-fixed text-on-tertiary border-b-4 border-on-tertiary hover:scale-[0.98] transition-transform cursor-pointer">
+                <h4 class="font-label text-xs font-bold mb-4">// TRANSMISSION</h4>
+                <div class="flex flex-col h-full justify-between">
+                    <p class="text-lg font-black leading-none uppercase">FOLLOW ME <br /> OR DIE <br /> (XOXO)</p>
+                    <span class="material-symbols-outlined text-4xl mt-4">trending_flat</span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer
+        class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 px-4 pb-safe bg-slate-950 border-t border-blue-900/30 shadow-[0_-4px_20px_rgba(0,241,254,0.05)]">
+        <div
+            class="flex flex-col items-center justify-center text-slate-600 hover:text-blue-200 transition-colors cursor-pointer font-label text-[10px] uppercase">
+            <span class="material-symbols-outlined">radar</span>
+            <span>STATUS: READY</span>
+        </div>
+        <div
+            class="flex flex-col items-center justify-center text-slate-600 hover:text-blue-200 transition-colors cursor-pointer font-label text-[10px] uppercase">
+            <span class="material-symbols-outlined">flash_on</span>
+            <span>GODSPEED: OFF</span>
+        </div>
+        <div
+            class="flex flex-col items-center justify-center text-yellow-400 scale-110 font-label text-[10px] uppercase">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">category</span>
+            <span>NEN: 100%</span>
+        </div>
+        <div
+            class="flex flex-col items-center justify-center text-slate-600 hover:text-blue-200 transition-colors cursor-pointer font-label text-[10px] uppercase">
+            <span class="material-symbols-outlined">terminal</span>
+            <span>LOC: PADOKIA</span>
+        </div>
+    </footer>
+    <div class="fixed left-0 top-0 h-full w-1 bg-slate-900/50 z-40">
+        <div class="w-full h-1/4 bg-primary animate-pulse"></div>
+        <div class="w-full h-1 bg-secondary-container absolute top-1/2 shadow-[0_0_10px_#00f1fe]"></div>
+    </div>
+</body>
+
+</html>
