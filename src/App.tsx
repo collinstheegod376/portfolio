@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Github = ({ size }: { size: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
@@ -15,6 +15,16 @@ const Mail = ({ size }: { size: number }) => (
 
 const Download = ({ size }: { size: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+);
+
+const MenuIcon = ({ size }: { size: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+);
+
+const XIcon = ({ size }: { size: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+  </svg>
 );
 
 const TechCategory = ({ title, items }: { title: string, items: { name: string, iconUrl: string }[] }) => (
@@ -49,6 +59,7 @@ const SkillCard = ({ title, color, textColor, children }: { title: string, color
 const App = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [activeSlide, setActiveSlide] = useState(0);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const scrollToIndex = (index: number) => {
     if (scrollRef.current) {
@@ -70,20 +81,56 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-background text-text-bright selection:bg-accent-purple selection:text-white pb-32 font-sans overflow-x-hidden">
-      <nav className="fixed top-8 left-1/2 -translate-x-1/2 z-50">
-        <div className="bg-surface-light/40 backdrop-blur-3xl border border-white/5 rounded-full px-8 py-3 flex items-center gap-8 shadow-2xl">
-          <div className="flex gap-6 text-[10px] font-black uppercase tracking-widest">
-            <a href="#home" className="hover:text-accent-purple transition-colors">HOME</a>
-            <a href="#education" className="hover:text-accent-purple transition-colors text-text-muted">EDUCATION</a>
-            <a href="#experience" className="hover:text-accent-purple transition-colors text-text-muted">WORKS</a>
+      <nav className="fixed top-8 left-1/2 -translate-x-1/2 z-50 w-full max-w-max px-4">
+        <div className="bg-[#0A0A0A]/80 backdrop-blur-2xl border border-white/5 rounded-[100px] px-6 py-[12px] flex items-center justify-between shadow-2xl relative">
+
+          {/* Desktop Nav */}
+          <div className="hidden md:flex items-center gap-8">
+            <div className="flex gap-8 text-[11px] font-black uppercase tracking-[0.2em]">
+              <a href="#home" className="hover:text-accent-purple transition-colors text-white">home</a>
+              <a href="#experience" className="hover:text-accent-purple transition-colors text-[#6F6F6F]">experience</a>
+            </div>
+            <div className="w-px h-3 bg-white/10"></div>
+            <div className="flex gap-5 items-center">
+              <a href="https://github.com/collinstheegod376" target="_blank" rel="noreferrer" className="text-[#6F6F6F] hover:text-white transition-colors"><Github size={15} /></a>
+              <a href="https://x.com/promisedkillua" target="_blank" rel="noreferrer" className="text-[#6F6F6F] hover:text-white transition-colors"><XIcon size={15} /></a>
+              <a href="https://t.me/promisedkillua" target="_blank" rel="noreferrer" className="text-[#6F6F6F] hover:text-white transition-colors"><Telegram size={15} /></a>
+              <a href="mailto:promisedkillua@gmail.com" className="text-[#6F6F6F] hover:text-white transition-colors"><Mail size={15} /></a>
+            </div>
           </div>
-          <div className="w-px h-4 bg-white/10"></div>
-          <div className="flex gap-4 items-center">
-            <a href="https://github.com/collinstheegod376" target="_blank" rel="noreferrer" className="text-text-muted hover:text-white transition-colors"><Github size={16} /></a>
-            <a href="https://t.me/promisedkillua" target="_blank" rel="noreferrer" className="text-text-muted hover:text-white transition-colors"><Telegram size={16} /></a>
-            <a href="mailto:promisedkillua@gmail.com" className="text-text-muted hover:text-white transition-colors"><Mail size={16} /></a>
+
+          {/* Mobile Nav Header */}
+          <div className="flex md:hidden w-full items-center justify-between gap-[40px]">
+            <span className="text-[11px] font-black uppercase tracking-[0.2em] text-white">home</span>
+            <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-[#6F6F6F] hover:text-white transition-colors">
+              <MenuIcon size={20} />
+            </button>
           </div>
         </div>
+
+        {/* Mobile Nav Menu Dropdown */}
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              className="absolute top-[120%] left-4 right-4 md:hidden bg-[#0A0A0A]/95 backdrop-blur-3xl border border-white/10 rounded-2xl p-6 flex flex-col gap-6 shadow-2xl"
+            >
+              <div className="flex flex-col gap-5 text-center text-[11px] font-black uppercase tracking-[0.2em]">
+                <a href="#home" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-accent-purple transition-colors">Home</a>
+                <a href="#experience" onClick={() => setIsMobileMenuOpen(false)} className="text-[#6F6F6F] hover:text-accent-purple transition-colors">Experience</a>
+              </div>
+              <div className="w-full h-px bg-white/10"></div>
+              <div className="flex justify-center gap-8 items-center">
+                <a href="https://github.com/collinstheegod376" target="_blank" rel="noreferrer" className="text-[#6F6F6F] hover:text-white transition-colors"><Github size={18} /></a>
+                <a href="https://x.com/promisedkillua" target="_blank" rel="noreferrer" className="text-[#6F6F6F] hover:text-white transition-colors"><XIcon size={18} /></a>
+                <a href="https://t.me/promisedkillua" target="_blank" rel="noreferrer" className="text-[#6F6F6F] hover:text-white transition-colors"><Telegram size={18} /></a>
+                <a href="mailto:promisedkillua@gmail.com" className="text-[#6F6F6F] hover:text-white transition-colors"><Mail size={18} /></a>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </nav>
 
       <main id="home" className="pt-56 px-8 max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -99,11 +146,11 @@ const App = () => {
           <p className="max-w-[662px] font-light text-[24px] leading-[48px] text-[#6F6F6F] mb-12">
             Hello Promised Killua Here I Am A <span className="font-bold text-white">Fullstack Web Developer</span>. I Have Over <span className="font-bold text-white">7 Months</span> Of Experience In Web Development. I Have Worked On Various Web Applications,
           </p>
-          <div className="flex flex-row items-start gap-[31px]">
-            <a href="/Promised_Killua_CV_Professional.pdf" download="Promised_Killua_CV_Professional.pdf" className="flex flex-row justify-center items-center px-[40px] py-[12px] gap-[8px] bg-white text-background rounded-[100px] font-bold text-sm hover:bg-accent-mint transition-colors w-[184px] h-[46px]">
-              Dowload CV <Download size={16} />
+          <div className="flex flex-row items-center gap-[31px]">
+            <a href="/Promised_Killua_CV_Professional.pdf" download="Promised_Killua_CV_Professional.pdf" className="flex flex-row justify-center items-center px-[40px] py-[12px] gap-[8px] bg-white text-background rounded-[100px] font-sans font-semibold text-[16px] hover:bg-accent-mint transition-colors w-max whitespace-nowrap h-[46px]">
+              Download CV <Download size={18} />
             </a>
-            <a href="#experience" className="text-accent-purple font-medium text-sm hover:text-white transition-colors flex items-center h-[46px]">
+            <a href="#experience" className="text-accent-purple font-medium text-[16px] hover:text-white transition-colors flex items-center h-[46px]">
               My works
             </a>
           </div>
@@ -210,7 +257,73 @@ const App = () => {
         </div>
       </section>
 
-      <section className="mt-72 px-8 max-w-6xl mx-auto">
+      <section id="experience" className="mt-52 px-6 lg:px-8 max-w-6xl mx-auto flex flex-col items-center">
+        <div className="text-center font-sans font-light text-[18px] text-[#A6A6A6] mb-[28px] max-w-2xl leading-relaxed">
+          &lt; Here, you can know me a little more and see my <br className="hidden sm:block" /> whole experience as a <span className="font-bold text-white">Fullstack Web Developer</span>. /&gt;
+        </div>
+
+        <a href="/Promised_Killua_CV_Professional.pdf" download="Promised_Killua_CV_Professional.pdf" className="mb-[100px] flex flex-row justify-center items-center px-[40px] py-[12px] gap-[8px] bg-white text-background rounded-[100px] font-sans font-semibold text-[16px] hover:bg-accent-mint transition-colors h-[46px] w-max whitespace-nowrap">
+          Download CV <Download size={18} />
+        </a>
+
+        <div className="w-full flex flex-col gap-10">
+          {/* Card 1 */}
+          <div className="bg-[#111111] rounded-[40px] p-8 md:p-14 flex flex-col md:flex-row gap-8 md:gap-16 w-full transition-transform hover:-translate-y-1">
+            <div className="flex flex-col md:w-[35%] shrink-0">
+              <h4 className="text-white font-sans font-bold text-[22px] leading-tight mb-2"> FULLSTACK WEB DEVELOPER</h4>
+              <span className="text-[#A259FF] font-sans font-medium text-[15px] mb-[30px] block">Contract</span>
+              <span className="text-[#6F6F6F] font-sans text-[13px] leading-relaxed block">Present<br /></span>
+            </div>
+            <div className="flex flex-col md:w-[65%]">
+              <h5 className="text-[#A259FF] font-sans font-bold text-[18px] mb-6">Company Name</h5>
+              <p className="text-[#848484] font-sans font-normal text-[14px] leading-[26px] mb-6">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+              </p>
+              <p className="text-[#848484] font-sans font-normal text-[14px] leading-[26px]">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+              </p>
+            </div>
+          </div>
+
+          {/* Card 2 */}
+          <div className="bg-[#111111] rounded-[40px] p-8 md:p-14 flex flex-col md:flex-row gap-8 md:gap-16 w-full transition-transform hover:-translate-y-1">
+            <div className="flex flex-col md:w-[35%] shrink-0">
+              <h4 className="text-white font-sans font-bold text-[22px] leading-tight mb-2">Front-end Software Engineer</h4>
+              <span className="text-[#A259FF] font-sans font-medium text-[15px] mb-[30px] block">Contract</span>
+              <span className="text-[#6F6F6F] font-sans text-[13px] leading-relaxed block">Jan 2020 • Present<br />Manaus, AM - Brazil</span>
+            </div>
+            <div className="flex flex-col md:w-[65%]">
+              <h5 className="text-[#A259FF] font-sans font-bold text-[18px] mb-6">Company Name</h5>
+              <p className="text-[#848484] font-sans font-normal text-[14px] leading-[26px] mb-6">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+              </p>
+              <p className="text-[#848484] font-sans font-normal text-[14px] leading-[26px]">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+              </p>
+            </div>
+          </div>
+
+          {/* Card 3 */}
+          <div className="bg-[#111111] rounded-[40px] p-8 md:p-14 flex flex-col md:flex-row gap-8 md:gap-16 w-full transition-transform hover:-translate-y-1">
+            <div className="flex flex-col md:w-[35%] shrink-0">
+              <h4 className="text-white font-sans font-bold text-[22px] leading-tight mb-2">Front-end Software Engineer</h4>
+              <span className="text-[#A259FF] font-sans font-medium text-[15px] mb-[30px] block">Contract</span>
+              <span className="text-[#6F6F6F] font-sans text-[13px] leading-relaxed block">Jan 2020 • Present<br />Manaus, AM - Brazil</span>
+            </div>
+            <div className="flex flex-col md:w-[65%]">
+              <h5 className="text-[#A259FF] font-sans font-bold text-[18px] mb-6">Company Name</h5>
+              <p className="text-[#848484] font-sans font-normal text-[14px] leading-[26px] mb-6">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+              </p>
+              <p className="text-[#848484] font-sans font-normal text-[14px] leading-[26px]">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mt-52 px-8 max-w-6xl mx-auto">
         <h3 className="font-sans font-normal text-[60px] leading-[70px] text-[#C8C8C8] mb-28 max-w-lg">
           These are the <br /> technologies <br /> that I've been using
         </h3>
@@ -265,6 +378,7 @@ const App = () => {
           <span className="text-text-muted font-black uppercase tracking-[0.3em] text-xs">Follow me</span>
           <div className="flex gap-12">
             <a href="https://github.com/collinstheegod376" target="_blank" rel="noreferrer" className="text-text-muted hover:text-accent-purple transition-all hover:scale-110"><Github size={24} /></a>
+            <a href="https://x.com/promisedkillua" target="_blank" rel="noreferrer" className="text-text-muted hover:text-accent-purple transition-all hover:scale-110"><XIcon size={24} /></a>
             <a href="https://t.me/promisedkillua" target="_blank" rel="noreferrer" className="text-text-muted hover:text-accent-purple transition-all hover:scale-110"><Telegram size={24} /></a>
             <a href="mailto:promisedkillua@gmail.com" className="text-text-muted hover:text-accent-purple transition-all hover:scale-110"><Mail size={24} /></a>
           </div>
