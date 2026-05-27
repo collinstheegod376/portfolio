@@ -17,8 +17,8 @@ export default {
         "text-muted": "#c8c8c8",
       },
       fontFamily: {
-        "sans": ["Raleway", "sans-serif"],
-        "heading": ["Raleway", "sans-serif"],
+        "sans": ["Nunito", "sans-serif"],
+        "heading": ["Nunito", "sans-serif"],
       },
       borderRadius: {
         "4xl": "2.5rem",

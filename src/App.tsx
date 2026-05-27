@@ -82,8 +82,8 @@ const App = () => {
   return (
     <div className="min-h-screen bg-background text-text-bright selection:bg-accent-purple selection:text-white pb-32 font-sans overflow-x-hidden">
       <nav className="fixed top-8 left-1/2 -translate-x-1/2 z-50 w-full max-w-max px-4">
-        <div className="bg-[#0A0A0A]/80 backdrop-blur-2xl border border-white/5 rounded-[100px] px-6 py-[12px] flex items-center justify-between shadow-2xl relative">
-
+        <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-[100px] px-6 py-[12px] flex items-center justify-between shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] relative">
+          
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
             <div className="flex gap-8 text-[11px] font-black uppercase tracking-[0.2em]">
@@ -115,7 +115,7 @@ const App = () => {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              className="absolute top-[120%] left-4 right-4 md:hidden bg-[#0A0A0A]/95 backdrop-blur-3xl border border-white/10 rounded-2xl p-6 flex flex-col gap-6 shadow-2xl"
+              className="absolute top-[120%] left-4 right-4 md:hidden bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 flex flex-col gap-6 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]"
             >
               <div className="flex flex-col gap-5 text-center text-[11px] font-black uppercase tracking-[0.2em]">
                 <a href="#home" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-accent-purple transition-colors">Home</a>
@@ -138,7 +138,7 @@ const App = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="lg:col-span-8"
+          className="lg:col-span-8 order-2 lg:order-1"
         >
           <h1 className="text-7xl md:text-9xl font-black tracking-tighter mb-10 leading-[0.85]">
             Hi, I'm Killua
@@ -160,7 +160,7 @@ const App = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="lg:col-span-4 flex justify-center"
+          className="lg:col-span-4 flex justify-center order-1 lg:order-2"
         >
           <div className="relative w-full max-w-[400px] aspect-[390/380]">
             <div className="absolute inset-0 bg-accent-mint/20 rounded-full blur-3xl scale-90 rotate-12"></div>
@@ -284,42 +284,6 @@ const App = () => {
               </p>
             </div>
           </div>
-
-          {/* Card 2 */}
-          <div className="bg-[#111111] rounded-[40px] p-8 md:p-14 flex flex-col md:flex-row gap-8 md:gap-16 w-full transition-transform hover:-translate-y-1">
-            <div className="flex flex-col md:w-[35%] shrink-0">
-              <h4 className="text-white font-sans font-bold text-[22px] leading-tight mb-2">Front-end Software Engineer</h4>
-              <span className="text-[#A259FF] font-sans font-medium text-[15px] mb-[30px] block">Contract</span>
-              <span className="text-[#6F6F6F] font-sans text-[13px] leading-relaxed block">Jan 2020 • Present<br />Manaus, AM - Brazil</span>
-            </div>
-            <div className="flex flex-col md:w-[65%]">
-              <h5 className="text-[#A259FF] font-sans font-bold text-[18px] mb-6">Company Name</h5>
-              <p className="text-[#848484] font-sans font-normal text-[14px] leading-[26px] mb-6">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-              </p>
-              <p className="text-[#848484] font-sans font-normal text-[14px] leading-[26px]">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-              </p>
-            </div>
-          </div>
-
-          {/* Card 3 */}
-          <div className="bg-[#111111] rounded-[40px] p-8 md:p-14 flex flex-col md:flex-row gap-8 md:gap-16 w-full transition-transform hover:-translate-y-1">
-            <div className="flex flex-col md:w-[35%] shrink-0">
-              <h4 className="text-white font-sans font-bold text-[22px] leading-tight mb-2">Front-end Software Engineer</h4>
-              <span className="text-[#A259FF] font-sans font-medium text-[15px] mb-[30px] block">Contract</span>
-              <span className="text-[#6F6F6F] font-sans text-[13px] leading-relaxed block">Jan 2020 • Present<br />Manaus, AM - Brazil</span>
-            </div>
-            <div className="flex flex-col md:w-[65%]">
-              <h5 className="text-[#A259FF] font-sans font-bold text-[18px] mb-6">Company Name</h5>
-              <p className="text-[#848484] font-sans font-normal text-[14px] leading-[26px] mb-6">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-              </p>
-              <p className="text-[#848484] font-sans font-normal text-[14px] leading-[26px]">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -373,18 +337,19 @@ const App = () => {
         </div>
       </section>
 
-      <footer className="mt-72 px-8 py-20 border-t border-white/5 bg-surface/20">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
-          <span className="text-text-muted font-black uppercase tracking-[0.3em] text-xs">Follow me</span>
-          <div className="flex gap-12">
-            <a href="https://github.com/collinstheegod376" target="_blank" rel="noreferrer" className="text-text-muted hover:text-accent-purple transition-all hover:scale-110"><Github size={24} /></a>
-            <a href="https://x.com/promisedkillua" target="_blank" rel="noreferrer" className="text-text-muted hover:text-accent-purple transition-all hover:scale-110"><XIcon size={24} /></a>
-            <a href="https://t.me/promisedkillua" target="_blank" rel="noreferrer" className="text-text-muted hover:text-accent-purple transition-all hover:scale-110"><Telegram size={24} /></a>
-            <a href="mailto:promisedkillua@gmail.com" className="text-text-muted hover:text-accent-purple transition-all hover:scale-110"><Mail size={24} /></a>
+      <footer className="mt-40 px-4 md:px-8 pb-10">
+        <div className="max-w-6xl mx-auto flex flex-col gap-6">
+          <div className="bg-[#111111]/80 rounded-[100px] px-8 md:px-12 py-6 flex flex-col sm:flex-row justify-between items-center gap-6 shadow-xl">
+            <span className="text-[#6F6F6F] font-sans font-medium text-[16px] tracking-wide">Follow me</span>
+            <div className="flex gap-8 items-center">
+              <a href="https://github.com/collinstheegod376" target="_blank" rel="noreferrer" className="text-[#A259FF] hover:text-white transition-all hover:scale-110"><Github size={20} /></a>
+              <a href="https://x.com/promisedkillua" target="_blank" rel="noreferrer" className="text-[#A259FF] hover:text-white transition-all hover:scale-110"><XIcon size={20} /></a>
+              <a href="https://t.me/promisedkillua" target="_blank" rel="noreferrer" className="text-[#A259FF] hover:text-white transition-all hover:scale-110"><Telegram size={20} /></a>
+              <a href="mailto:promisedkillua@gmail.com" className="text-[#A259FF] hover:text-white transition-all hover:scale-110"><Mail size={20} /></a>
+            </div>
           </div>
-          <div className="flex flex-col items-end gap-1">
-            <span className="text-text-bright font-black tracking-widest text-sm">KILLUA Z.</span>
-            <span className="text-text-muted text-[10px] font-bold uppercase tracking-widest">zoldyck © 2024</span>
+          <div className="flex px-4 md:px-12">
+            <span className="text-white/40 font-sans text-[11px] font-medium tracking-wide">killuaz © 2024</span>
           </div>
         </div>
       </footer>
