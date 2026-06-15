@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Github = ({ size }: { size: number }) => (
@@ -60,6 +60,28 @@ const App = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [activeSlide, setActiveSlide] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['home', 'experience', 'skills', 'contact'];
+      let current = sections[0];
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 200) {
+            current = section;
+          }
+        }
+      }
+      setActiveSection(current);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const scrollToIndex = (index: number) => {
     if (scrollRef.current) {
@@ -87,10 +109,15 @@ const App = () => {
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
             <div className="flex gap-8 text-[11px] font-black uppercase tracking-[0.2em]">
-              <a href="#home" className="hover:text-accent-purple transition-colors text-white">home</a>
-              <a href="#experience" className="hover:text-accent-purple transition-colors text-[#6F6F6F]">experience</a>
-              <a href="#skills" className="hover:text-accent-purple transition-colors text-[#6F6F6F]">skills</a>
-              <a href="#contact" className="hover:text-accent-purple transition-colors text-[#6F6F6F]">contact</a>
+              {['home', 'experience', 'skills', 'contact'].map(section => (
+                <a 
+                  key={section} 
+                  href={`#${section}`} 
+                  className={`transition-colors ${activeSection === section ? 'text-white' : 'text-[#6F6F6F] hover:text-accent-purple'}`}
+                >
+                  {section}
+                </a>
+              ))}
             </div>
             <div className="w-px h-3 bg-white/10"></div>
             <div className="flex gap-5 items-center">
@@ -103,7 +130,7 @@ const App = () => {
 
           {/* Mobile Nav Header */}
           <div className="flex md:hidden w-full items-center justify-between gap-[40px]">
-            <span className="text-[11px] font-black uppercase tracking-[0.2em] text-white">home</span>
+            <span className="text-[11px] font-black uppercase tracking-[0.2em] text-white">{activeSection}</span>
             <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-[#6F6F6F] hover:text-white transition-colors">
               <MenuIcon size={20} />
             </button>
@@ -120,10 +147,18 @@ const App = () => {
               className="absolute top-[120%] left-1/2 w-[calc(100vw-2rem)] sm:w-[320px] md:hidden bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 flex flex-col gap-6 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]"
             >
               <div className="flex flex-col gap-5 text-center text-[11px] font-black uppercase tracking-[0.2em]">
-                <a href="#home" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-accent-purple transition-colors">Home</a>
-                <a href="#experience" onClick={() => setIsMobileMenuOpen(false)} className="text-[#6F6F6F] hover:text-accent-purple transition-colors">Experience</a>
-                <a href="#skills" onClick={() => setIsMobileMenuOpen(false)} className="text-[#6F6F6F] hover:text-accent-purple transition-colors">Skills</a>
-                <a href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="text-[#6F6F6F] hover:text-accent-purple transition-colors">Contact</a>
+                {['home', 'experience', 'skills', 'contact']
+                  .filter(section => section !== activeSection)
+                  .map(section => (
+                    <a 
+                      key={section} 
+                      href={`#${section}`} 
+                      onClick={() => setIsMobileMenuOpen(false)} 
+                      className="text-[#6F6F6F] hover:text-accent-purple transition-colors"
+                    >
+                      {section}
+                    </a>
+                  ))}
               </div>
               <div className="w-full h-px bg-white/10"></div>
               <div className="flex justify-center gap-8 items-center">
