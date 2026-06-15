@@ -83,12 +83,14 @@ const App = () => {
     <div className="min-h-screen bg-background text-text-bright selection:bg-accent-purple selection:text-white pb-32 font-sans overflow-x-hidden">
       <nav className="fixed top-8 left-1/2 -translate-x-1/2 z-50 w-full max-w-max px-4">
         <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-[100px] px-6 py-[12px] flex items-center justify-between shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] relative">
-          
+
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
             <div className="flex gap-8 text-[11px] font-black uppercase tracking-[0.2em]">
               <a href="#home" className="hover:text-accent-purple transition-colors text-white">home</a>
               <a href="#experience" className="hover:text-accent-purple transition-colors text-[#6F6F6F]">experience</a>
+              <a href="#skills" className="hover:text-accent-purple transition-colors text-[#6F6F6F]">skills</a>
+              <a href="#contact" className="hover:text-accent-purple transition-colors text-[#6F6F6F]">contact</a>
             </div>
             <div className="w-px h-3 bg-white/10"></div>
             <div className="flex gap-5 items-center">
@@ -112,14 +114,16 @@ const App = () => {
         <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              className="absolute top-[120%] left-4 right-4 md:hidden bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 flex flex-col gap-6 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]"
+              initial={{ opacity: 0, y: -10, x: "-50%" }}
+              animate={{ opacity: 1, y: 0, x: "-50%" }}
+              exit={{ opacity: 0, y: -10, x: "-50%" }}
+              className="absolute top-[120%] left-1/2 w-[calc(100vw-2rem)] sm:w-[320px] md:hidden bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 flex flex-col gap-6 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]"
             >
               <div className="flex flex-col gap-5 text-center text-[11px] font-black uppercase tracking-[0.2em]">
                 <a href="#home" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-accent-purple transition-colors">Home</a>
                 <a href="#experience" onClick={() => setIsMobileMenuOpen(false)} className="text-[#6F6F6F] hover:text-accent-purple transition-colors">Experience</a>
+                <a href="#skills" onClick={() => setIsMobileMenuOpen(false)} className="text-[#6F6F6F] hover:text-accent-purple transition-colors">Skills</a>
+                <a href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="text-[#6F6F6F] hover:text-accent-purple transition-colors">Contact</a>
               </div>
               <div className="w-full h-px bg-white/10"></div>
               <div className="flex justify-center gap-8 items-center">
@@ -272,22 +276,28 @@ const App = () => {
             <div className="flex flex-col md:w-[35%] shrink-0">
               <h4 className="text-white font-sans font-bold text-[22px] leading-tight mb-2"> FULLSTACK WEB DEVELOPER</h4>
               <span className="text-[#A259FF] font-sans font-medium text-[15px] mb-[30px] block">Contract</span>
-              <span className="text-[#6F6F6F] font-sans text-[13px] leading-relaxed block">Present<br /></span>
+              <span className="text-[#6F6F6F] font-sans text-[13px] leading-relaxed block">Completed<br /></span>
             </div>
             <div className="flex flex-col md:w-[65%]">
-              <h5 className="text-[#A259FF] font-sans font-bold text-[18px] mb-6">Company Name</h5>
+              <h5 className="font-sans font-bold text-[18px] mb-6">
+                <a href="https://wheelrush.fun/" target="_blank" rel="noreferrer" className="text-[#A259FF] hover:text-white transition-all underline-offset-4 hover:underline flex items-center gap-2 w-max">
+                  Wheelrush
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+              </h5>
               <p className="text-[#848484] font-sans font-normal text-[14px] leading-[26px] mb-6">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                Spin the Wheel Rush prize wheel to win virtual cash from $500K to $10 Billion! Free to play spin-to-win game with a global leaderboard.
               </p>
               <p className="text-[#848484] font-sans font-normal text-[14px] leading-[26px]">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                Built with React, TypeScript, Tailwind CSS, and modern component patterns. My work focuses on clean layouts, fast user flows, reusable UI, and production-ready frontend structure.
+
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="mt-52 px-8 max-w-6xl mx-auto">
+      <section id="skills" className="mt-52 px-8 max-w-6xl mx-auto">
         <h3 className="font-sans font-normal text-[60px] leading-[70px] text-[#C8C8C8] mb-28 max-w-lg">
           These are the <br /> technologies <br /> that I've been using
         </h3>
@@ -337,7 +347,7 @@ const App = () => {
         </div>
       </section>
 
-      <footer className="mt-40 px-4 md:px-8 pb-10">
+      <footer id="contact" className="mt-40 px-4 md:px-8 pb-10">
         <div className="max-w-6xl mx-auto flex flex-col gap-6">
           <div className="bg-[#111111]/80 rounded-[100px] px-8 md:px-12 py-6 flex flex-col sm:flex-row justify-between items-center gap-6 shadow-xl">
             <span className="text-[#6F6F6F] font-sans font-medium text-[16px] tracking-wide">Follow me</span>
