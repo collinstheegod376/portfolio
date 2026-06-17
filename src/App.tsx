@@ -353,7 +353,6 @@ const App = () => {
               { name: "Next.JS", iconUrl: "https://cdn.simpleicons.org/nextdotjs/white" },
               { name: "Vite", iconUrl: "https://cdn.simpleicons.org/vite/646CFF" },
               { name: "Figma", iconUrl: "https://cdn.simpleicons.org/figma" },
-              { name: "Jest", iconUrl: "https://cdn.simpleicons.org/jest/C21325" },
               { name: "React Testing Library", iconUrl: "https://cdn.simpleicons.org/testinglibrary/E33332" }
             ]}
           />
@@ -361,22 +360,23 @@ const App = () => {
             title="Languages"
             items={[
               { name: "Javascript", iconUrl: "https://cdn.simpleicons.org/javascript/F7DF1E" },
-              { name: "TypeScript", iconUrl: "https://cdn.simpleicons.org/typescript/3178C6" }
+              { name: "TypeScript", iconUrl: "https://cdn.simpleicons.org/typescript/3178C6" },
+              { name: "Python", iconUrl: "https://cdn.simpleicons.org/python/3776AB" },
+              { name: "SQL", iconUrl: "https://cdn.simpleicons.org/mysql/4479A1" }
             ]}
           />
           <TechCategory
             title="Devops"
             items={[
-              { name: "Github Actions", iconUrl: "https://cdn.simpleicons.org/githubactions/2088FF" },
-              { name: "Nginx", iconUrl: "https://cdn.simpleicons.org/nginx/009639" },
-              { name: "Docker", iconUrl: "https://cdn.simpleicons.org/docker/2496ED" }
+              { name: "Github Actions", iconUrl: "https://cdn.simpleicons.org/githubactions/2088FF" }
             ]}
           />
           <TechCategory
             title="Back-end"
             items={[
               { name: "Node.js", iconUrl: "https://cdn.simpleicons.org/nodedotjs/339933" },
-              { name: "Prisma", iconUrl: "https://cdn.simpleicons.org/prisma/white" }
+              { name: "PostgreSQL", iconUrl: "https://cdn.simpleicons.org/postgresql/4169E1" },
+              { name: "Supabase", iconUrl: "https://cdn.simpleicons.org/supabase/3ECF8E" }
             ]}
           />
         </div>

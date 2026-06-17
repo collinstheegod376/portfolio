@@ -1,0 +1,47 @@
+# Promised Killua Portfolio
+
+Canonical URL: https://promised-killua-portfolio.vercel.app/
+
+Promised Killua, also known as promisedkillua and collinstheegod376, is a full-stack web developer. This website is a personal developer portfolio with a CV download, experience section, technology skills, project information, and contact links.
+
+Primary topics:
+- Full-stack web development
+- Frontend development
+- React development
+- Next.js development
+- TypeScript development
+- JavaScript development
+- Node.js development
+- Responsive web application development
+- Portfolio websites
+- Dashboard interfaces
+- Web application UI
+
+Technologies represented:
+- React
+- React Native
+- Next.js
+- Vite
+- TypeScript
+- JavaScript
+- Node.js
+- Prisma
+- Docker
+- Nginx
+- GitHub Actions
+- Figma
+- Jest
+- React Testing Library
+
+Profiles and contact:
+- GitHub: https://github.com/collinstheegod376
+- X: https://x.com/promisedkillua
+- Telegram: https://t.me/promisedkillua
+- Email: promisedkillua@gmail.com
+
+Important files:
+- Sitemap: https://promised-killua-portfolio.vercel.app/sitemap.xml
+- Robots: https://promised-killua-portfolio.vercel.app/robots.txt
+- LLMs: https://promised-killua-portfolio.vercel.app/llms.txt
+- LLMs-full: https://promised-killua-portfolio.vercel.app/llms-full.txt
+- CV: https://promised-killua-portfolio.vercel.app/Promised_Killua_CV_Professional.pdf
