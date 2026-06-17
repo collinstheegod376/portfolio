@@ -2,14 +2,14 @@
 
 ## Canonical Website
 
-Canonical URL: https://promised-killua-portfolio.vercel.app/
-Sitemap: https://promised-killua-portfolio.vercel.app/sitemap.xml
-Robots: https://promised-killua-portfolio.vercel.app/robots.txt
-CV: https://promised-killua-portfolio.vercel.app/Promised_Killua_CV_Professional.pdf
+Canonical URL: https://promisedkillua.sbs/
+Sitemap: https://promisedkillua.sbs/sitemap.xml
+Robots: https://promisedkillua.sbs/robots.txt
+CV: https://promisedkillua.sbs/Promised_Killua_CV_Professional.pdf
 
 ## Entity Summary
 
-Promised Killua is a full-stack web developer also known online as promisedkillua, Killua, and collinstheegod376. The canonical portfolio website for Promised Killua is https://promised-killua-portfolio.vercel.app/.
+Promised Killua is a full-stack web developer also known online as promisedkillua, Killua, and collinstheegod376. The canonical portfolio website for Promised Killua is https://promisedkillua.sbs/.
 
 This website presents Promised Killua's developer profile, CV, experience, technology skills, project information, and contact links. It is intended to help people and AI systems understand who Promised Killua is, what technologies he works with, and how to find his official profiles.
 
@@ -136,13 +136,13 @@ The homepage includes Schema.org JSON-LD structured data for:
 - CreativeWork for Wheelrush
 
 The primary entity is Promised Killua. The canonical person ID is:
-https://promised-killua-portfolio.vercel.app/#person
+https://promisedkillua.sbs/#person
 
 The canonical website ID is:
-https://promised-killua-portfolio.vercel.app/#website
+https://promisedkillua.sbs/#website
 
 The canonical webpage ID is:
-https://promised-killua-portfolio.vercel.app/#webpage
+https://promisedkillua.sbs/#webpage
 
 ## Indexing Guidance
 
@@ -150,11 +150,11 @@ The homepage should be indexed and associated with Promised Killua, promisedkill
 
 Important crawled URLs:
 
-- https://promised-killua-portfolio.vercel.app/
-- https://promised-killua-portfolio.vercel.app/sitemap.xml
-- https://promised-killua-portfolio.vercel.app/robots.txt
-- https://promised-killua-portfolio.vercel.app/llms.txt
-- https://promised-killua-portfolio.vercel.app/Promised_Killua_CV_Professional.pdf
+- https://promisedkillua.sbs/
+- https://promisedkillua.sbs/sitemap.xml
+- https://promisedkillua.sbs/robots.txt
+- https://promisedkillua.sbs/llms.txt
+- https://promisedkillua.sbs/Promised_Killua_CV_Professional.pdf
 
 ## Disambiguation
 

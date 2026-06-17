@@ -1,6 +1,6 @@
 # Promised Killua Portfolio
 
-Canonical URL: https://promised-killua-portfolio.vercel.app/
+Canonical URL: https://promisedkillua.sbs/
 
 Promised Killua, also known as promisedkillua and collinstheegod376, is a full-stack web developer. This website is a personal developer portfolio with a CV download, experience section, technology skills, project information, and contact links.
 
@@ -40,8 +40,8 @@ Profiles and contact:
 - Email: promisedkillua@gmail.com
 
 Important files:
-- Sitemap: https://promised-killua-portfolio.vercel.app/sitemap.xml
-- Robots: https://promised-killua-portfolio.vercel.app/robots.txt
-- LLMs: https://promised-killua-portfolio.vercel.app/llms.txt
-- LLMs-full: https://promised-killua-portfolio.vercel.app/llms-full.txt
-- CV: https://promised-killua-portfolio.vercel.app/Promised_Killua_CV_Professional.pdf
+- Sitemap: https://promisedkillua.sbs/sitemap.xml
+- Robots: https://promisedkillua.sbs/robots.txt
+- LLMs: https://promisedkillua.sbs/llms.txt
+- LLMs-full: https://promisedkillua.sbs/llms-full.txt
+- CV: https://promisedkillua.sbs/Promised_Killua_CV_Professional.pdf
