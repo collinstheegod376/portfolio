@@ -27,33 +27,51 @@ const XIcon = ({ size }: { size: number }) => (
   </svg>
 );
 
-const TechCategory = ({ title, items }: { title: string, items: { name: string, iconUrl: string }[] }) => (
-  <div className="flex flex-col w-full md:w-[305px] min-h-[180px] bg-surface rounded-xl border border-white/5 p-6 box-border">
+const TechCategory = ({ title, items, index }: { title: string, items: { name: string, iconUrl: string }[], index?: number }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 25 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, margin: "-30px" }}
+    transition={{ duration: 0.5, delay: (index || 0) * 0.08 }}
+    whileHover={{ y: -5 }}
+    className="flex flex-col w-full md:w-[305px] min-h-[180px] bg-surface rounded-xl border border-white/5 p-6 box-border transition-colors duration-300 hover:border-white/10"
+  >
     <h4 className="font-sans font-normal text-[16px] leading-[22px] text-white mb-[25px]">
       {title}
     </h4>
     <div className="flex flex-col gap-[14px]">
       {items.map(item => (
-        <div key={item.name} className="flex flex-row items-center gap-[14px]">
+        <motion.div
+          key={item.name}
+          whileHover={{ x: 5 }}
+          transition={{ type: "spring", stiffness: 400, damping: 20 }}
+          className="flex flex-row items-center gap-[14px]"
+        >
           <div className="w-[34px] h-[34px] rounded-full bg-[#272727] flex items-center justify-center shrink-0">
             <img src={item.iconUrl} alt={item.name} className="w-[18px] h-[18px] object-contain" />
           </div>
           <span className="font-sans font-normal text-[16px] leading-[22px] text-white">
             {item.name}
           </span>
-        </div>
+        </motion.div>
       ))}
     </div>
-  </div>
+  </motion.div>
 );
 
 const SkillCard = ({ title, color, textColor, children }: { title: string, color: string, textColor: string, children: React.ReactNode }) => (
-  <div className="shrink-0 w-[409px] h-[277px] rounded-[60px] flex flex-col justify-center px-12 relative transition-all duration-300 hover:-translate-y-2 snap-center" style={{ backgroundColor: color }}>
+  <motion.div
+    whileHover={{ y: -8, scale: 1.02 }}
+    whileTap={{ scale: 0.98 }}
+    transition={{ type: "spring", stiffness: 400, damping: 25 }}
+    className="shrink-0 w-[409px] h-[277px] rounded-[60px] flex flex-col justify-center px-12 relative transition-shadow duration-300 cursor-pointer snap-center shadow-lg hover:shadow-2xl"
+    style={{ backgroundColor: color }}
+  >
     <div className="absolute top-[90px] w-[60px] h-[60px] flex items-center justify-center">
       {children}
     </div>
     <span className="font-sans font-bold text-[26px] leading-[31px] absolute top-[161px]" style={{ color: textColor }}>{title}</span>
-  </div>
+  </motion.div>
 );
 
 const App = () => {
@@ -104,68 +122,80 @@ const App = () => {
   return (
     <div className="min-h-screen bg-background text-text-bright selection:bg-accent-purple selection:text-white pb-32 font-sans overflow-x-hidden">
       <nav className="fixed top-8 left-1/2 -translate-x-1/2 z-50 w-full max-w-max px-4">
-        <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-[100px] px-6 py-[12px] flex items-center justify-between shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] relative">
-
+        <motion.div
+          initial={{ opacity: 0, y: -15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-[100px] px-6 py-[12px] flex items-center justify-between shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] relative"
+        >
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
             <div className="flex gap-8 text-[11px] font-black uppercase tracking-[0.2em]">
               {['home', 'experience', 'skills', 'contact'].map(section => (
-                <a 
+                <motion.a 
                   key={section} 
                   href={`#${section}`} 
+                  whileHover={{ scale: 1.08 }}
+                  whileTap={{ scale: 0.95 }}
                   className={`transition-colors ${activeSection === section ? 'text-white' : 'text-[#6F6F6F] hover:text-accent-purple'}`}
                 >
                   {section}
-                </a>
+                </motion.a>
               ))}
             </div>
             <div className="w-px h-3 bg-white/10"></div>
             <div className="flex gap-5 items-center">
-              <a href="https://github.com/collinstheegod376" target="_blank" rel="noreferrer" className="text-[#6F6F6F] hover:text-white transition-colors"><Github size={15} /></a>
-              <a href="https://x.com/promisedkillua" target="_blank" rel="noreferrer" className="text-[#6F6F6F] hover:text-white transition-colors"><XIcon size={15} /></a>
-              <a href="https://t.me/promisedkillua" target="_blank" rel="noreferrer" className="text-[#6F6F6F] hover:text-white transition-colors"><Telegram size={15} /></a>
-              <a href="mailto:promisedkillua@gmail.com" className="text-[#6F6F6F] hover:text-white transition-colors"><Mail size={15} /></a>
+              <motion.a whileHover={{ scale: 1.2, rotate: 5 }} whileTap={{ scale: 0.9 }} href="https://github.com/collinstheegod376" target="_blank" rel="noreferrer" className="text-[#6F6F6F] hover:text-white transition-colors"><Github size={15} /></motion.a>
+              <motion.a whileHover={{ scale: 1.2, rotate: -5 }} whileTap={{ scale: 0.9 }} href="https://x.com/nerfed_killua" target="_blank" rel="noreferrer" className="text-[#6F6F6F] hover:text-white transition-colors"><XIcon size={15} /></motion.a>
+              <motion.a whileHover={{ scale: 1.2, rotate: 5 }} whileTap={{ scale: 0.9 }} href="https://t.me/nerfed_killua" target="_blank" rel="noreferrer" className="text-[#6F6F6F] hover:text-white transition-colors"><Telegram size={15} /></motion.a>
+              <motion.a whileHover={{ scale: 1.2, rotate: -5 }} whileTap={{ scale: 0.9 }} href="mailto:promisedkillua@gmail.com" className="text-[#6F6F6F] hover:text-white transition-colors"><Mail size={15} /></motion.a>
             </div>
           </div>
 
           {/* Mobile Nav Header */}
           <div className="flex md:hidden w-full items-center justify-between gap-[40px]">
             <span className="text-[11px] font-black uppercase tracking-[0.2em] text-white">{activeSection}</span>
-            <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-[#6F6F6F] hover:text-white transition-colors">
+            <motion.button
+              whileTap={{ scale: 0.9 }}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="text-[#6F6F6F] hover:text-white transition-colors"
+            >
               <MenuIcon size={20} />
-            </button>
+            </motion.button>
           </div>
-        </div>
+        </motion.div>
 
         {/* Mobile Nav Menu Dropdown */}
         <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.div
-              initial={{ opacity: 0, y: -10, x: "-50%" }}
-              animate={{ opacity: 1, y: 0, x: "-50%" }}
-              exit={{ opacity: 0, y: -10, x: "-50%" }}
-              className="absolute top-[120%] left-1/2 w-[calc(100vw-2rem)] sm:w-[320px] md:hidden bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 flex flex-col gap-6 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]"
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.25 }}
+              className="absolute top-[120%] left-4 right-4 sm:left-1/2 sm:-translate-x-1/2 sm:w-[320px] md:hidden bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 flex flex-col gap-6 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]"
             >
               <div className="flex flex-col gap-5 text-center text-[11px] font-black uppercase tracking-[0.2em]">
                 {['home', 'experience', 'skills', 'contact']
                   .filter(section => section !== activeSection)
                   .map(section => (
-                    <a 
+                    <motion.a 
                       key={section} 
                       href={`#${section}`} 
+                      whileTap={{ scale: 0.95 }}
                       onClick={() => setIsMobileMenuOpen(false)} 
                       className="text-[#6F6F6F] hover:text-accent-purple transition-colors"
                     >
                       {section}
-                    </a>
+                    </motion.a>
                   ))}
               </div>
               <div className="w-full h-px bg-white/10"></div>
               <div className="flex justify-center gap-8 items-center">
-                <a href="https://github.com/collinstheegod376" target="_blank" rel="noreferrer" className="text-[#6F6F6F] hover:text-white transition-colors"><Github size={18} /></a>
-                <a href="https://x.com/promisedkillua" target="_blank" rel="noreferrer" className="text-[#6F6F6F] hover:text-white transition-colors"><XIcon size={18} /></a>
-                <a href="https://t.me/promisedkillua" target="_blank" rel="noreferrer" className="text-[#6F6F6F] hover:text-white transition-colors"><Telegram size={18} /></a>
-                <a href="mailto:promisedkillua@gmail.com" className="text-[#6F6F6F] hover:text-white transition-colors"><Mail size={18} /></a>
+                <motion.a whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} href="https://github.com/collinstheegod376" target="_blank" rel="noreferrer" className="text-[#6F6F6F] hover:text-white transition-colors"><Github size={18} /></motion.a>
+                <motion.a whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} href="https://x.com/nerfed_killua" target="_blank" rel="noreferrer" className="text-[#6F6F6F] hover:text-white transition-colors"><XIcon size={18} /></motion.a>
+                <motion.a whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} href="https://t.me/nerfed_killua" target="_blank" rel="noreferrer" className="text-[#6F6F6F] hover:text-white transition-colors"><Telegram size={18} /></motion.a>
+                <motion.a whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} href="mailto:promisedkillua@gmail.com" className="text-[#6F6F6F] hover:text-white transition-colors"><Mail size={18} /></motion.a>
               </div>
             </motion.div>
           )}
@@ -186,12 +216,25 @@ const App = () => {
             Hello Promised Killua Here I Am A <span className="font-bold text-white">Fullstack Web Developer</span>. I Have Over <span className="font-bold text-white">7 Months</span> Of Experience In Web Development. I Have Worked On Various Web Applications,
           </p>
           <div className="flex flex-row items-center gap-[31px]">
-            <a href="/Promised_Killua_CV_Professional.pdf" download="Promised_Killua_CV_Professional.pdf" className="flex flex-row justify-center items-center px-[40px] py-[12px] gap-[8px] bg-white text-background rounded-[100px] font-sans font-semibold text-[16px] hover:bg-accent-mint transition-colors w-max whitespace-nowrap h-[46px]">
+            <motion.a 
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 400, damping: 20 }}
+              href="/Promised_Killua_CV_Professional.pdf" 
+              download="Promised_Killua_CV_Professional.pdf" 
+              className="flex flex-row justify-center items-center px-[40px] py-[12px] gap-[8px] bg-white text-background rounded-[100px] font-sans font-semibold text-[16px] hover:bg-accent-mint transition-colors w-max whitespace-nowrap h-[46px]"
+            >
               Download CV <Download size={18} />
-            </a>
-            <a href="#experience" className="text-accent-purple font-medium text-[16px] hover:text-white transition-colors flex items-center h-[46px]">
+            </motion.a>
+            <motion.a 
+              whileHover={{ scale: 1.05, x: 4 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 400, damping: 20 }}
+              href="#experience" 
+              className="text-accent-purple font-medium text-[16px] hover:text-white transition-colors flex items-center h-[46px]"
+            >
               My works
-            </a>
+            </motion.a>
           </div>
         </motion.div>
 
@@ -210,7 +253,7 @@ const App = () => {
                 </clipPath>
               </defs>
               <image
-                href="https://pbs.twimg.com/profile_images/2056295886104170496/zFmgiPIl_400x400.jpg"
+                href="/killua-hero.png"
                 width="390"
                 height="380"
                 preserveAspectRatio="xMidYMid slice"
@@ -224,7 +267,13 @@ const App = () => {
       <section className="mt-40 max-w-[1781px] mx-auto relative px-8 lg:px-20 overflow-hidden">
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-16 lg:gap-[40px]">
           {/* Left Text Box */}
-          <div className="flex flex-col w-[250px] shrink-0 pt-10">
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="flex flex-col w-[250px] shrink-0 pt-10"
+          >
             <span className="font-sans font-medium text-[16px] leading-[48px] text-[#6F6F6F]">
               7 Months  of
             </span>
@@ -234,7 +283,7 @@ const App = () => {
             <p className="font-sans font-medium text-[16px] leading-[19px] text-[#6F6F6F]">
               with the most popular ecosystem frontend
             </p>
-          </div>
+          </motion.div>
 
           {/* Right Scrollable Cards */}
           <div className="flex-1 w-full relative">
@@ -285,8 +334,10 @@ const App = () => {
             {/* Pagination Indicators */}
             <div className="flex justify-center items-center gap-[6px] mt-6">
               {[0, 1, 2, 3].map(i => (
-                <button
+                <motion.button
                   key={i}
+                  whileHover={{ scale: 1.2 }}
+                  whileTap={{ scale: 0.85 }}
                   onClick={() => scrollToIndex(i)}
                   className={`h-[13px] rounded-[100px] transition-all duration-300 cursor-pointer ${activeSlide === i ? 'w-[66.29px] bg-[#D9D9D9]' : 'w-[20.43px] bg-[#606060] hover:bg-[#808080]'}`}
                 />
@@ -296,18 +347,36 @@ const App = () => {
         </div>
       </section>
 
-      <section id="experience" className="mt-52 px-6 lg:px-8 max-w-6xl mx-auto flex flex-col items-center">
+      <motion.section 
+        id="experience" 
+        initial={{ opacity: 0, y: 35 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.15 }}
+        transition={{ duration: 0.7 }}
+        className="mt-52 px-6 lg:px-8 max-w-6xl mx-auto flex flex-col items-center"
+      >
         <div className="text-center font-sans font-light text-[18px] text-[#A6A6A6] mb-[28px] max-w-2xl leading-relaxed">
           &lt; Here, you can know me a little more and see my <br className="hidden sm:block" /> whole experience as a <span className="font-bold text-white">Fullstack Web Developer</span>. /&gt;
         </div>
 
-        <a href="/Promised_Killua_CV_Professional.pdf" download="Promised_Killua_CV_Professional.pdf" className="mb-[100px] flex flex-row justify-center items-center px-[40px] py-[12px] gap-[8px] bg-white text-background rounded-[100px] font-sans font-semibold text-[16px] hover:bg-accent-mint transition-colors h-[46px] w-max whitespace-nowrap">
+        <motion.a 
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          transition={{ type: "spring", stiffness: 400, damping: 20 }}
+          href="/Promised_Killua_CV_Professional.pdf" 
+          download="Promised_Killua_CV_Professional.pdf" 
+          className="mb-[100px] flex flex-row justify-center items-center px-[40px] py-[12px] gap-[8px] bg-white text-background rounded-[100px] font-sans font-semibold text-[16px] hover:bg-accent-mint transition-colors h-[46px] w-max whitespace-nowrap"
+        >
           Download CV <Download size={18} />
-        </a>
+        </motion.a>
 
         <div className="w-full flex flex-col gap-10">
           {/* Card 1 */}
-          <div className="bg-[#111111] rounded-[40px] p-8 md:p-14 flex flex-col md:flex-row gap-8 md:gap-16 w-full transition-transform hover:-translate-y-1">
+          <motion.div 
+            whileHover={{ y: -6 }}
+            transition={{ duration: 0.3 }}
+            className="bg-[#111111] rounded-[40px] p-8 md:p-14 flex flex-col md:flex-row gap-8 md:gap-16 w-full shadow-lg border border-white/5"
+          >
             <div className="flex flex-col md:w-[35%] shrink-0">
               <h4 className="text-white font-sans font-bold text-[22px] leading-tight mb-2"> FULLSTACK WEB DEVELOPER</h4>
               <span className="text-[#A259FF] font-sans font-medium text-[15px] mb-[30px] block">Contract</span>
@@ -315,30 +384,43 @@ const App = () => {
             </div>
             <div className="flex flex-col md:w-[65%]">
               <h5 className="font-sans font-bold text-[18px] mb-6">
-                <a href="https://wheelrush.fun/" target="_blank" rel="noreferrer" className="text-[#A259FF] hover:text-white transition-all underline-offset-4 hover:underline flex items-center gap-2 w-max">
+                <motion.a 
+                  whileHover={{ x: 4 }}
+                  href="https://wheelrush.fun/" 
+                  target="_blank" 
+                  rel="noreferrer" 
+                  className="text-[#A259FF] hover:text-white transition-all underline-offset-4 hover:underline flex items-center gap-2 w-max"
+                >
                   Wheelrush
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                </a>
+                </motion.a>
               </h5>
               <p className="text-[#848484] font-sans font-normal text-[14px] leading-[26px] mb-6">
                 Spin the Wheel Rush prize wheel to win virtual cash from $500K to $10 Billion! Free to play spin-to-win game with a global leaderboard.
               </p>
               <p className="text-[#848484] font-sans font-normal text-[14px] leading-[26px]">
                 Built with React, TypeScript, Tailwind CSS, and modern component patterns. My work focuses on clean layouts, fast user flows, reusable UI, and production-ready frontend structure.
-
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
 
-      <section id="skills" className="mt-52 px-8 max-w-6xl mx-auto">
+      <motion.section 
+        id="skills" 
+        initial={{ opacity: 0, y: 35 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.15 }}
+        transition={{ duration: 0.7 }}
+        className="mt-52 px-8 max-w-6xl mx-auto"
+      >
         <h3 className="font-sans font-normal text-[60px] leading-[70px] text-[#C8C8C8] mb-28 max-w-lg">
           These are the <br /> technologies <br /> that I've been using
         </h3>
 
         <div className="flex flex-wrap gap-12 justify-center lg:justify-start max-w-5xl mx-auto">
           <TechCategory
+            index={0}
             title="Publications in both stores"
             items={[
               { name: "App Store", iconUrl: "https://cdn.simpleicons.org/appstore/0D96F6" },
@@ -346,6 +428,7 @@ const App = () => {
             ]}
           />
           <TechCategory
+            index={1}
             title="Front-end Engineer Design"
             items={[
               { name: "React JS", iconUrl: "https://cdn.simpleicons.org/react/61DBFB" },
@@ -357,6 +440,7 @@ const App = () => {
             ]}
           />
           <TechCategory
+            index={2}
             title="Languages"
             items={[
               { name: "Javascript", iconUrl: "https://cdn.simpleicons.org/javascript/F7DF1E" },
@@ -366,12 +450,14 @@ const App = () => {
             ]}
           />
           <TechCategory
+            index={3}
             title="Devops"
             items={[
               { name: "Github Actions", iconUrl: "https://cdn.simpleicons.org/githubactions/2088FF" }
             ]}
           />
           <TechCategory
+            index={4}
             title="Back-end"
             items={[
               { name: "Node.js", iconUrl: "https://cdn.simpleicons.org/nodedotjs/339933" },
@@ -380,24 +466,31 @@ const App = () => {
             ]}
           />
         </div>
-      </section>
+      </motion.section>
 
-      <footer id="contact" className="mt-40 px-4 md:px-8 pb-10">
+      <motion.footer 
+        id="contact" 
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7 }}
+        className="mt-40 px-4 md:px-8 pb-10"
+      >
         <div className="max-w-6xl mx-auto flex flex-col gap-6">
-          <div className="bg-[#111111]/80 rounded-[100px] px-8 md:px-12 py-6 flex flex-col sm:flex-row justify-between items-center gap-6 shadow-xl">
+          <div className="bg-[#111111]/80 rounded-[100px] px-8 md:px-12 py-6 flex flex-col sm:flex-row justify-between items-center gap-6 shadow-xl border border-white/5">
             <span className="text-[#6F6F6F] font-sans font-medium text-[16px] tracking-wide">Follow me</span>
             <div className="flex gap-8 items-center">
-              <a href="https://github.com/collinstheegod376" target="_blank" rel="noreferrer" className="text-[#A259FF] hover:text-white transition-all hover:scale-110"><Github size={20} /></a>
-              <a href="https://x.com/promisedkillua" target="_blank" rel="noreferrer" className="text-[#A259FF] hover:text-white transition-all hover:scale-110"><XIcon size={20} /></a>
-              <a href="https://t.me/promisedkillua" target="_blank" rel="noreferrer" className="text-[#A259FF] hover:text-white transition-all hover:scale-110"><Telegram size={20} /></a>
-              <a href="mailto:promisedkillua@gmail.com" className="text-[#A259FF] hover:text-white transition-all hover:scale-110"><Mail size={20} /></a>
+              <motion.a whileHover={{ scale: 1.25, rotate: 6 }} whileTap={{ scale: 0.9 }} href="https://github.com/collinstheegod376" target="_blank" rel="noreferrer" className="text-[#A259FF] hover:text-white transition-all"><Github size={20} /></motion.a>
+              <motion.a whileHover={{ scale: 1.25, rotate: -6 }} whileTap={{ scale: 0.9 }} href="https://x.com/nerfed_killua" target="_blank" rel="noreferrer" className="text-[#A259FF] hover:text-white transition-all"><XIcon size={20} /></motion.a>
+              <motion.a whileHover={{ scale: 1.25, rotate: 6 }} whileTap={{ scale: 0.9 }} href="https://t.me/nerfed_killua" target="_blank" rel="noreferrer" className="text-[#A259FF] hover:text-white transition-all"><Telegram size={20} /></motion.a>
+              <motion.a whileHover={{ scale: 1.25, rotate: -6 }} whileTap={{ scale: 0.9 }} href="mailto:promisedkillua@gmail.com" className="text-[#A259FF] hover:text-white transition-all"><Mail size={20} /></motion.a>
             </div>
           </div>
           <div className="flex px-4 md:px-12">
-            <span className="text-white/40 font-sans text-[11px] font-medium tracking-wide">killuaz © 2024</span>
+            <span className="text-white/40 font-sans text-[11px] font-medium tracking-wide">nerfed_killua © 2026</span>
           </div>
         </div>
-      </footer>
+      </motion.footer>
     </div>
   );
 };

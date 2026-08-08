@@ -1,5 +1,8 @@
-*"I don't just build websites. I build experiences that look like they were designed in a parallel anime universe."*
+> *"I don't just build websites. I build experiences that look like they were designed in a parallel anime universe."*
 
+## 🛠️ The Weapons of Choice (Tech Stack)
+
+I brought a lightsaber to a gunfight. Here’s the arsenal:
 
 | **Weapon** | **Purpose** |
 | :--- | :--- |
