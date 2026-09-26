@@ -1,9 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+  <!-- Homepage / Portfolio -->
   <url>
     <loc>https://promisedkillua.sbs/</loc>
-    <lastmod>2025-06-15</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://promisedkillua.sbs/killua-hero.png</image:loc>
+      <image:title>Promised Killua - Full-Stack Web Developer Hero Image</image:title>
+      <image:caption>Promised Killua, also known as promisedkillua and collinstheegod376, is a full-stack web developer specializing in React, Next.js, and TypeScript.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://promisedkillua.sbs/favicon.jpg</image:loc>
+      <image:title>Promised Killua Favicon</image:title>
+    </image:image>
+  </url>
+
+  <!-- Downloadable CV -->
+  <url>
+    <loc>https://promisedkillua.sbs/Promised_Killua_CV_Professional.pdf</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- LLMs.txt (AI discovery) -->
+  <url>
+    <loc>https://promisedkillua.sbs/llms.txt</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- LLMs-full.txt (AI discovery, extended) -->
+  <url>
+    <loc>https://promisedkillua.sbs/llms-full.txt</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Robots.txt -->
+  <url>
+    <loc>https://promisedkillua.sbs/robots.txt</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.1</priority>
+  </url>
+
+  <!-- Sitemap self-reference -->
+  <url>
+    <loc>https://promisedkillua.sbs/sitemap.xml</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>

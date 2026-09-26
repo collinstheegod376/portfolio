@@ -1,4 +1,75 @@
+# =============================================================
+# robots.txt for promisedkillua.sbs
+# Last updated: 2026-09-26
+# =============================================================
+
+# ---- Default: allow everything ----
 User-agent: *
 Allow: /
+Disallow: /assets/
+Crawl-delay: 2
 
+# ---- Google ----
+User-agent: Googlebot
+Allow: /
+Allow: /sitemap.xml
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /Promised_Killua_CV_Professional.pdf
+Allow: /killua-hero.png
+
+User-agent: Googlebot-Image
+Allow: /killua-hero.png
+Allow: /favicon.jpg
+
+# ---- Bing ----
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 5
+
+# ---- Yandex ----
+User-agent: Yandex
+Allow: /
+Crawl-delay: 5
+
+# ---- Baidu ----
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 10
+
+# ---- DuckDuckGo ----
+User-agent: DuckDuckBot
+Allow: /
+
+# ---- AI / LLM Crawlers ----
+User-agent: GPTBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# ---- Sitemaps ----
 Sitemap: https://promisedkillua.sbs/sitemap.xml
+
+# ---- Host (legacy Yandex hint) ----
+Host: https://promisedkillua.sbs

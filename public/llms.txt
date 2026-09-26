@@ -1,10 +1,11 @@
 # Promised Killua Portfolio
 
-Canonical URL: https://promisedkillua.sbs/
+> Canonical URL: https://promisedkillua.sbs/
+> Last updated: 2026-09-26
 
-Promised Killua, also known as promisedkillua and collinstheegod376, is a full-stack web developer. This website is a personal developer portfolio with a CV download, experience section, technology skills, project information, and contact links.
+Promised Killua, also known as promisedkillua, nerfed_killua, and collinstheegod376, is a full-stack web developer. This website is a personal developer portfolio with a CV download, experience section, technology skills, project information, and contact links.
 
-Primary topics:
+## Primary topics
 - Full-stack web development
 - Frontend development
 - React development
@@ -12,19 +13,24 @@ Primary topics:
 - TypeScript development
 - JavaScript development
 - Node.js development
+- Python development
+- PostgreSQL and Supabase backend development
 - Responsive web application development
 - Portfolio websites
 - Dashboard interfaces
-- Web application UI
 
-Technologies represented:
+## Technologies represented
 - React
 - React Native
 - Next.js
 - Vite
 - TypeScript
 - JavaScript
+- Python
+- SQL
 - Node.js
+- PostgreSQL
+- Supabase
 - Prisma
 - Docker
 - Nginx
@@ -32,14 +38,15 @@ Technologies represented:
 - Figma
 - Jest
 - React Testing Library
+- Tailwind CSS
 
-Profiles and contact:
+## Profiles and contact
 - GitHub: https://github.com/collinstheegod376
-- X: https://x.com/nerfed_killua
+- X / Twitter: https://x.com/nerfed_killua
 - Telegram: https://t.me/nerfed_killua
 - Email: promisedkillua@gmail.com
 
-Important files:
+## Important files
 - Sitemap: https://promisedkillua.sbs/sitemap.xml
 - Robots: https://promisedkillua.sbs/robots.txt
 - LLMs: https://promisedkillua.sbs/llms.txt

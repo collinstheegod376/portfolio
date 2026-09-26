@@ -1,0 +1,16 @@
+/* TEAM */
+Developer: Promised Killua
+Handle: promisedkillua, nerfed_killua, collinstheegod376
+Role: Full-Stack Web Developer
+Contact: promisedkillua [at] gmail.com
+Twitter: @nerfed_killua
+GitHub: collinstheegod376
+From: Lagos, Nigeria
+
+/* SITE */
+Last update: 2026-09-26
+Language: English
+Standards: HTML5, CSS3, ES2024
+Components: React 19, TypeScript, Vite, Tailwind CSS, Framer Motion
+Doctype: HTML5
+IDE: VS Code
