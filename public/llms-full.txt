@@ -50,6 +50,7 @@ The site includes:
 - A downloadable professional CV
 - Full-stack web developer experience
 - A Wheelrush project reference (https://wheelrush.fun/)
+- An Orvix Agent project reference (https://www.orvixagent.fun/)
 - Frontend and backend technology skills
 - Programming language proficiency (JavaScript, TypeScript, Python, SQL)
 - DevOps tooling skills
@@ -129,6 +130,10 @@ DevOps and deployment:
 URL: https://wheelrush.fun/
 Wheelrush is referenced as a project or work experience item on the portfolio. It is a spin-to-win web game concept with virtual cash prizes and a global leaderboard. Built with React, TypeScript, Tailwind CSS, and modern component patterns. Relevant project categories include web game, React project, frontend project, and leaderboard interface.
 
+### Orvix — Solana Dev Radar
+URL: https://www.orvixagent.fun/
+Orvix is a Solana developer monitoring radar and intelligence feed. It aggregates official network incident reports from Solana Status and Agave client software releases into a unified feed with short summaries, timestamps, and direct links to original sources. Built with vanilla HTML, CSS, and JavaScript. Features auto-refresh, category filters (network reports, client releases, saved items), bookmarking, and raw JSON export.
+
 ## Official Profiles
 
 GitHub:
@@ -153,6 +158,7 @@ The homepage includes Schema.org JSON-LD structured data for:
 - WebPage
 - ItemList of developer skills
 - CreativeWork for Wheelrush
+- CreativeWork for Orvix — Solana Dev Radar
 
 The primary entity is Promised Killua. The canonical person ID is:
 https://promisedkillua.sbs/#person

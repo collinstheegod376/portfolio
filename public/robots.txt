@@ -16,10 +16,10 @@ Allow: /sitemap.xml
 Allow: /llms.txt
 Allow: /llms-full.txt
 Allow: /Promised_Killua_CV_Professional.pdf
-Allow: /killua-hero.png
+Allow: /killua-hero.jpg
 
 User-agent: Googlebot-Image
-Allow: /killua-hero.png
+Allow: /killua-hero.jpg
 Allow: /favicon.jpg
 
 # ---- Bing ----

@@ -11,7 +11,7 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://promisedkillua.sbs/killua-hero.png</image:loc>
+      <image:loc>https://promisedkillua.sbs/killua-hero.jpg</image:loc>
       <image:title>Promised Killua - Full-Stack Web Developer Hero Image</image:title>
       <image:caption>Promised Killua, also known as promisedkillua and collinstheegod376, is a full-stack web developer specializing in React, Next.js, and TypeScript.</image:caption>
     </image:image>
@@ -27,37 +27,5 @@
     <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-
-  <!-- LLMs.txt (AI discovery) -->
-  <url>
-    <loc>https://promisedkillua.sbs/llms.txt</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <!-- LLMs-full.txt (AI discovery, extended) -->
-  <url>
-    <loc>https://promisedkillua.sbs/llms-full.txt</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <!-- Robots.txt -->
-  <url>
-    <loc>https://promisedkillua.sbs/robots.txt</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.1</priority>
-  </url>
-
-  <!-- Sitemap self-reference -->
-  <url>
-    <loc>https://promisedkillua.sbs/sitemap.xml</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
   </url>
 </urlset>

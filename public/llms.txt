@@ -40,6 +40,10 @@ Promised Killua, also known as promisedkillua, nerfed_killua, and collinstheegod
 - React Testing Library
 - Tailwind CSS
 
+## Projects and Works
+- Wheelrush: https://wheelrush.fun/ (Spin-to-win web game with virtual cash prizes and global leaderboard)
+- Orvix — Solana Dev Radar: https://www.orvixagent.fun/ (Aggregates official Solana network incident reports and Agave client releases)
+
 ## Profiles and contact
 - GitHub: https://github.com/collinstheegod376
 - X / Twitter: https://x.com/nerfed_killua
