@@ -347,17 +347,19 @@ const App = () => {
         </div>
       </section>
 
-      <motion.section 
+      <section 
         id="experience" 
-        initial={{ opacity: 0, y: 35 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.15 }}
-        transition={{ duration: 0.7 }}
         className="mt-52 px-6 lg:px-8 max-w-6xl mx-auto flex flex-col items-center"
       >
-        <div className="text-center font-sans font-light text-[18px] text-[#A6A6A6] mb-[28px] max-w-2xl leading-relaxed">
+        <motion.div 
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "50px 0px" }}
+          transition={{ duration: 0.5 }}
+          className="text-center font-sans font-light text-[18px] text-[#A6A6A6] mb-[28px] max-w-2xl leading-relaxed"
+        >
           &lt; Here, you can know me a little more and see my <br className="hidden sm:block" /> whole experience as a <span className="font-bold text-white">Fullstack Web Developer</span>. /&gt;
-        </div>
+        </motion.div>
 
         <motion.a 
           whileHover={{ scale: 1.05 }}
@@ -373,8 +375,11 @@ const App = () => {
         <div className="w-full flex flex-col gap-10">
           {/* Card 1 - Wheelrush */}
           <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "50px 0px" }}
+            transition={{ duration: 0.4 }}
             whileHover={{ y: -6 }}
-            transition={{ duration: 0.3 }}
             className="bg-[#111111] rounded-[40px] p-8 md:p-14 flex flex-col md:flex-row gap-8 md:gap-16 w-full shadow-lg border border-white/5"
           >
             <div className="flex flex-col md:w-[35%] shrink-0">
@@ -406,8 +411,11 @@ const App = () => {
 
           {/* Card 2 - Orvix */}
           <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "50px 0px" }}
+            transition={{ duration: 0.4 }}
             whileHover={{ y: -6 }}
-            transition={{ duration: 0.3 }}
             className="bg-[#111111] rounded-[40px] p-8 md:p-14 flex flex-col md:flex-row gap-8 md:gap-16 w-full shadow-lg border border-white/5"
           >
             <div className="flex flex-col md:w-[35%] shrink-0">
@@ -439,8 +447,11 @@ const App = () => {
 
           {/* Card 3 - Anizuki */}
           <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "50px 0px" }}
+            transition={{ duration: 0.4 }}
             whileHover={{ y: -6 }}
-            transition={{ duration: 0.3 }}
             className="bg-[#111111] rounded-[40px] p-8 md:p-14 flex flex-col md:flex-row gap-8 md:gap-16 w-full shadow-lg border border-white/5"
           >
             <div className="flex flex-col md:w-[35%] shrink-0">
@@ -472,8 +483,11 @@ const App = () => {
 
           {/* Card 4 - SolTrace */}
           <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "50px 0px" }}
+            transition={{ duration: 0.4 }}
             whileHover={{ y: -6 }}
-            transition={{ duration: 0.3 }}
             className="bg-[#111111] rounded-[40px] p-8 md:p-14 flex flex-col md:flex-row gap-8 md:gap-16 w-full shadow-lg border border-white/5"
           >
             <div className="flex flex-col md:w-[35%] shrink-0">
@@ -505,8 +519,11 @@ const App = () => {
 
           {/* Card 5 - Allpad */}
           <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "50px 0px" }}
+            transition={{ duration: 0.4 }}
             whileHover={{ y: -6 }}
-            transition={{ duration: 0.3 }}
             className="bg-[#111111] rounded-[40px] p-8 md:p-14 flex flex-col md:flex-row gap-8 md:gap-16 w-full shadow-lg border border-white/5"
           >
             <div className="flex flex-col md:w-[35%] shrink-0">
@@ -538,8 +555,11 @@ const App = () => {
 
           {/* Card 6 - Lattice Lab */}
           <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "50px 0px" }}
+            transition={{ duration: 0.4 }}
             whileHover={{ y: -6 }}
-            transition={{ duration: 0.3 }}
             className="bg-[#111111] rounded-[40px] p-8 md:p-14 flex flex-col md:flex-row gap-8 md:gap-16 w-full shadow-lg border border-white/5"
           >
             <div className="flex flex-col md:w-[35%] shrink-0">
@@ -571,8 +591,11 @@ const App = () => {
 
           {/* Card 7 - DOT */}
           <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "50px 0px" }}
+            transition={{ duration: 0.4 }}
             whileHover={{ y: -6 }}
-            transition={{ duration: 0.3 }}
             className="bg-[#111111] rounded-[40px] p-8 md:p-14 flex flex-col md:flex-row gap-8 md:gap-16 w-full shadow-lg border border-white/5"
           >
             <div className="flex flex-col md:w-[35%] shrink-0">
@@ -604,8 +627,11 @@ const App = () => {
 
           {/* Card 8 - Arachnos-AI */}
           <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "50px 0px" }}
+            transition={{ duration: 0.4 }}
             whileHover={{ y: -6 }}
-            transition={{ duration: 0.3 }}
             className="bg-[#111111] rounded-[40px] p-8 md:p-14 flex flex-col md:flex-row gap-8 md:gap-16 w-full shadow-lg border border-white/5"
           >
             <div className="flex flex-col md:w-[35%] shrink-0">
@@ -635,19 +661,21 @@ const App = () => {
             </div>
           </motion.div>
         </div>
-      </motion.section>
+      </section>
 
-      <motion.section 
+      <section 
         id="skills" 
-        initial={{ opacity: 0, y: 35 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.15 }}
-        transition={{ duration: 0.7 }}
         className="mt-52 px-8 max-w-6xl mx-auto"
       >
-        <h3 className="font-sans font-normal text-[60px] leading-[70px] text-[#C8C8C8] mb-28 max-w-lg">
+        <motion.h3 
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "50px 0px" }}
+          transition={{ duration: 0.5 }}
+          className="font-sans font-normal text-[60px] leading-[70px] text-[#C8C8C8] mb-28 max-w-lg"
+        >
           These are the <br /> technologies <br /> that I've been using
-        </h3>
+        </motion.h3>
 
         <div className="flex flex-wrap gap-12 justify-center lg:justify-start max-w-5xl mx-auto">
           <TechCategory
@@ -718,7 +746,7 @@ const App = () => {
             ]}
           />
         </div>
-      </motion.section>
+      </section>
 
       <motion.footer 
         id="contact" 
