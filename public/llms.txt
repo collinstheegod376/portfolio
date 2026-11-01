@@ -1,48 +1,49 @@
 # Promised Killua Portfolio
 
 > Canonical URL: https://promisedkillua.sbs/
-> Last updated: 2026-09-26
+> Last updated: 2026-11-01
 
-Promised Killua, also known as promisedkillua, nerfed_killua, and collinstheegod376, is a full-stack web developer. This website is a personal developer portfolio with a CV download, experience section, technology skills, project information, and contact links.
+Promised Killua, also known as promisedkillua, nerfed_killua, and collinstheegod376, is a full-stack software engineer and Web3 / AI developer with over 10 months of intensive production experience. This website is a personal developer portfolio featuring a downloadable professional CV, production project showcases, open-source repositories, technology proficiencies, and official contact links.
 
 ## Primary topics
-- Full-stack web development
-- Frontend development
-- React development
-- Next.js development
-- TypeScript development
-- JavaScript development
-- Node.js development
-- Python development
-- PostgreSQL and Supabase backend development
-- Responsive web application development
-- Portfolio websites
-- Dashboard interfaces
+- Full-stack software engineering
+- Frontend engineering (React 19, Next.js App Router, Vite, Tailwind CSS)
+- Solana & Web3 development (@solana/web3.js, SPL tokens, Viem, on-chain analytics)
+- Autonomous AI multi-agent orchestration
+- Local private RAG & Chrome extensions (Manifest V3)
+- Sovereign cryptographic vaults (biometric passkeys, air-gapped signing)
+- High-frequency order book and tape flow boards
+- Real-time multiplayer gaming architectures (WebSockets)
+- Backend API and database engineering (Node.js, PostgreSQL, Supabase, Prisma)
 
 ## Technologies represented
-- React
-- React Native
-- Next.js
-- Vite
-- TypeScript
-- JavaScript
-- Python
-- SQL
-- Node.js
-- PostgreSQL
-- Supabase
-- Prisma
-- Docker
-- Nginx
-- GitHub Actions
+- React & React Native
+- Next.js (App Router, Server Components)
+- TypeScript & JavaScript
+- Solana Web3 (@solana/web3.js) & Viem
+- Cryptographic primitives (@noble/ciphers, @scure/bip39)
+- Passkey / WebAuthn
+- Python & SQL
+- Node.js & Express
+- PostgreSQL & Supabase
+- Prisma ORM
+- Docker & Nginx
+- GitHub Actions (CI/CD)
+- Tailwind CSS (v3 & v4) & Framer Motion
 - Figma
-- Jest
-- React Testing Library
-- Tailwind CSS
+- Jest & React Testing Library
 
-## Projects and Works
+## Featured Projects & Works
+- Lattice Lab: https://www.latticelab.fun (Autonomous multi-agent research operating system for materials science coordinating 7 AI agents)
+- SolTrace (Sol Tracer AI): https://soltracer.vercel.app (Conversational AI blockchain scanner for Solana with wallet tracking, money flow diagrams, and risk audits)
+- Allpad: https://www.allpad.online (Live Solana market flow board and depth tape reader ranking top mints by 24h turnover)
+- Anizuki: https://www.anizuki.sbs (Real-time multiplayer anime trivia and quiz battle arena with PIN rooms and leaderboards)
 - Wheelrush: https://wheelrush.fun/ (Spin-to-win web game with virtual cash prizes and global leaderboard)
 - Orvix — Solana Dev Radar: https://www.orvixagent.fun/ (Aggregates official Solana network incident reports and Agave client releases)
+
+## Open Source Repositories
+- DOT — Sovereign Cryptographic Solana Vault: https://github.com/collinstheegod376/DOT (Live Demo: https://dot-eight-gilt.vercel.app)
+- Arachnos AI — Local-First Learning Extension: https://github.com/collinstheegod376/Arachnos-AI (Procedural 60 FPS animated spiders, local private RAG)
 
 ## Profiles and contact
 - GitHub: https://github.com/collinstheegod376
@@ -55,4 +56,5 @@ Promised Killua, also known as promisedkillua, nerfed_killua, and collinstheegod
 - Robots: https://promisedkillua.sbs/robots.txt
 - LLMs: https://promisedkillua.sbs/llms.txt
 - LLMs-full: https://promisedkillua.sbs/llms-full.txt
-- CV: https://promisedkillua.sbs/Promised_Killua_CV_Professional.pdf
+- CV PDF: https://promisedkillua.sbs/Promised_Killua_CV_Professional.pdf
+- CV Web: https://promisedkillua.sbs/cv.html

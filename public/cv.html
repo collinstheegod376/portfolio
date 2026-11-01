@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promised Killua — Professional CV</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+    @page {
+      size: A4;
+      margin: 11mm 13mm 11mm 13mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: #1a1a1a;
+      background: #ffffff;
+      line-height: 1.42;
+      font-size: 9.2pt;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: #1d4ed8;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      width: 100%;
+    }
+
+    .page-break {
+      page-break-before: always;
+      break-before: page;
+      padding-top: 2mm;
+    }
+
+    /* Header */
+    .header {
+      border-bottom: 2px solid #2563eb;
+      padding-bottom: 9px;
+      margin-bottom: 12px;
+    }
+
+    .name-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      margin-bottom: 5px;
+    }
+
+    .name {
+      font-size: 22pt;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.5px;
+    }
+
+    .job-title {
+      font-size: 10.5pt;
+      font-weight: 700;
+      color: #2563eb;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 8.5pt;
+      color: #475569;
+    }
+
+    .contact-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+    }
+
+    .contact-item strong {
+      color: #0f172a;
+    }
+
+    /* Section Styling */
+    .section {
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: 10.2pt;
+      font-weight: 700;
+      color: #0f172a;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 3px;
+      margin-bottom: 7px;
+      display: flex;
+      align-items: center;
+    }
+
+    .section-title::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: #e2e8f0;
+      margin-left: 10px;
+    }
+
+    /* Summary */
+    .summary-text {
+      color: #334155;
+      font-size: 9.1pt;
+      line-height: 1.46;
+      text-align: justify;
+    }
+
+    /* Skills Table */
+    .skills-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 8.8pt;
+    }
+
+    .skills-table td {
+      padding: 2.8px 0;
+      vertical-align: top;
+    }
+
+    .skill-cat {
+      font-weight: 700;
+      color: #1e293b;
+      width: 155px;
+      white-space: nowrap;
+    }
+
+    .skill-items {
+      color: #475569;
+    }
+
+    /* Experience & Projects */
+    .item {
+      margin-bottom: 9px;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+
+    .item-title {
+      font-size: 9.5pt;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .item-role {
+      font-weight: 600;
+      color: #2563eb;
+    }
+
+    .item-date {
+      font-size: 8.5pt;
+      color: #64748b;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .item-links {
+      font-size: 8.2pt;
+      color: #2563eb;
+      margin-bottom: 3px;
+      font-weight: 500;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .item-links a {
+      font-weight: 600;
+    }
+
+    .bullets {
+      margin-left: 15px;
+      color: #334155;
+    }
+
+    .bullets li {
+      margin-bottom: 3px;
+      line-height: 1.4;
+      font-size: 8.8pt;
+    }
+
+    .bullets li strong {
+      color: #0f172a;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #f1f5f9;
+      color: #334155;
+      font-size: 7.6pt;
+      font-weight: 600;
+      padding: 1px 6px;
+      border-radius: 4px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .page-header-mini {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #cbd5e1;
+      padding-bottom: 4px;
+      margin-bottom: 12px;
+      font-size: 8pt;
+      color: #64748b;
+    }
+
+    .page-header-mini span strong {
+      color: #0f172a;
+    }
+
+    @media print {
+      body {
+        background: transparent;
+      }
+      .no-print {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- PAGE 1 -->
+  <div class="page">
+    <header class="header">
+      <div class="name-title-row">
+        <h1 class="name">Promised Killua</h1>
+        <div class="job-title">Full-Stack Software Engineer &amp; Web3 / AI Developer</div>
+      </div>
+      <div class="contact-row">
+        <span class="contact-item"><strong>Location:</strong> Lagos, Nigeria</span>
+        <span class="contact-item"><strong>Email:</strong> <a href="mailto:promisedkillua@gmail.com">promisedkillua@gmail.com</a></span>
+        <span class="contact-item"><strong>Portfolio:</strong> <a href="https://promisedkillua.sbs" target="_blank">promisedkillua.sbs</a></span>
+        <span class="contact-item"><strong>GitHub:</strong> <a href="https://github.com/collinstheegod376" target="_blank">github.com/collinstheegod376</a></span>
+        <span class="contact-item"><strong>X:</strong> <a href="https://x.com/nerfed_killua" target="_blank">@nerfed_killua</a></span>
+        <span class="contact-item"><strong>Telegram:</strong> <a href="https://t.me/nerfed_killua" target="_blank">@nerfed_killua</a></span>
+      </div>
+    </header>
+
+    <!-- Executive Summary -->
+    <section class="section">
+      <h2 class="section-title">Executive Summary</h2>
+      <p class="summary-text">
+        High-velocity <strong>Full-Stack Software Engineer</strong> with over <strong>10 months of intensive production experience</strong> engineering decentralized Web3 applications, multi-agent AI research systems, high-frequency market tape readers, and real-time multiplayer platforms. Deep expertise in modern TypeScript architectures (React 19, Next.js App Router, Vite, Tailwind CSS), on-chain cryptographic integrations (@solana/web3.js, noble/ciphers, biometrics/WebAuthn), local RAG companion extensions (Manifest V3), and reliable backend APIs (Node.js, PostgreSQL, Supabase). Proven capability delivering production-ready, security-audited code with exceptional UI/UX polish and sub-second load performance.
+      </p>
+    </section>
+
+    <!-- Technical Proficiencies -->
+    <section class="section">
+      <h2 class="section-title">Technical Proficiency</h2>
+      <table class="skills-table">
+        <tr>
+          <td class="skill-cat">Core Languages:</td>
+          <td class="skill-items">TypeScript, JavaScript (ES6+), Python, SQL, HTML5, CSS3</td>
+        </tr>
+        <tr>
+          <td class="skill-cat">Frontend Architecture:</td>
+          <td class="skill-items">Next.js (App Router, Server Actions, SSR), React 19, React Native, Vite, Tailwind CSS (v3 &amp; v4), Framer Motion, Figma</td>
+        </tr>
+        <tr>
+          <td class="skill-cat">Backend &amp; Databases:</td>
+          <td class="skill-items">Node.js, Express, PostgreSQL, Supabase, Prisma ORM, WebSockets, RESTful APIs</td>
+        </tr>
+        <tr>
+          <td class="skill-cat">Web3 &amp; Cryptography:</td>
+          <td class="skill-items">Solana Web3 (@solana/web3.js), SPL Tokens, Viem, Cryptographic Primitives (@noble/ciphers, @scure/bip39), Biometric Passkeys (WebAuthn), RPC Streaming</td>
+        </tr>
+        <tr>
+          <td class="skill-cat">AI &amp; Browser Systems:</td>
+          <td class="skill-items">Autonomous Agent Orchestration, Local RAG (Private Context Memory), Chrome Extensions (Manifest V3), Procedural Inverse-Kinematics Physics</td>
+        </tr>
+        <tr>
+          <td class="skill-cat">DevOps &amp; Testing:</td>
+          <td class="skill-items">Docker, Nginx, GitHub Actions (CI/CD Pipelines), Git, Jest, React Testing Library, Mobile App Store &amp; Google Play Store Deployments</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- Featured Commercial & Live Web Applications -->
+    <section class="section">
+      <h2 class="section-title">Featured Production Platforms &amp; Web Applications</h2>
+
+      <!-- Lattice Lab -->
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Lattice Lab — Autonomous Multi-Agent Materials Science OS</span>
+          <span class="item-date">2026</span>
+        </div>
+        <div class="item-links">
+          <a href="https://www.latticelab.fun" target="_blank">Live URL: latticelab.fun</a>
+          <span class="tag">Next.js</span>
+          <span class="tag">Autonomous Multi-Agent</span>
+          <span class="tag">Materials Science R&amp;D</span>
+          <span class="tag">Web3</span>
+        </div>
+        <ul class="bullets">
+          <li>Architected a multi-agent virtual laboratory coordinating 7 autonomous AI agents executing an end-to-end scientific research loop: literature retrieval from arXiv, hypothesis formulation, atomic structure simulation, and evidence archiving.</li>
+          <li>Engineered an interactive Operator Console, research publication archives, live token telemetry, and low-latency scientific data visualization dashboards.</li>
+        </ul>
+      </div>
+
+      <!-- SolTrace -->
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">SolTrace (Sol Tracer AI) — Conversational AI Solana On-Chain Scanner</span>
+          <span class="item-date">2026</span>
+        </div>
+        <div class="item-links">
+          <a href="https://soltracer.vercel.app" target="_blank">Live URL: soltracer.vercel.app</a>
+          <span class="tag">Next.js</span>
+          <span class="tag">Solana Web3</span>
+          <span class="tag">Conversational AI</span>
+          <span class="tag">Tailwind CSS</span>
+        </div>
+        <ul class="bullets">
+          <li>Engineered an open-source conversational AI blockchain scanner for Solana delivering real-time wallet tracking, interactive visual money flow diagrams, drainer risk security audits, and DEX swap analytics.</li>
+          <li>Implemented automated bundle auditing, token intelligence pipelines, and visual transaction path analysis via natural language queries.</li>
+        </ul>
+      </div>
+
+      <!-- Allpad -->
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Allpad — Live Solana Market Flow Board &amp; Tape Reader</span>
+          <span class="item-date">2026</span>
+        </div>
+        <div class="item-links">
+          <a href="https://www.allpad.online" target="_blank">Live URL: allpad.online</a>
+          <span class="tag">React</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">Solana RPC</span>
+          <span class="tag">Order Book Tape</span>
+        </div>
+        <ul class="bullets">
+          <li>Built a high-frequency Solana flow board tracking the top 10 busiest boosted mints by 24h turnover with sub-minute order depth updates.</li>
+          <li>Engineered real-time session readouts highlighting volume breakouts, climb velocities, and market liquidity with a sharp, zero-fluff dark interface.</li>
+        </ul>
+      </div>
+
+      <!-- Anizuki -->
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Anizuki — Real-Time Anime Trivia &amp; Multiplayer Battle Arena</span>
+          <span class="item-date">2026</span>
+        </div>
+        <div class="item-links">
+          <a href="https://www.anizuki.sbs" target="_blank">Live URL: anizuki.sbs</a>
+          <span class="tag">Next.js</span>
+          <span class="tag">WebSockets</span>
+          <span class="tag">Multiplayer Gaming</span>
+          <span class="tag">Tailwind CSS</span>
+        </div>
+        <ul class="bullets">
+          <li>Developed a real-time multiplayer anime quiz arena featuring live player lobbies, 6-digit PIN game rooms, instant head-to-head battles, and category playlists.</li>
+          <li>Built real-time score synchronization, player achievement progression, and global competitive leaderboards.</li>
+        </ul>
+      </div>
+
+    </section>
+  </div>
+
+  <!-- PAGE 2 -->
+  <div class="page page-break">
+    <div class="page-header-mini">
+      <span><strong>Promised Killua</strong> — Full-Stack Software Engineer</span>
+      <span>promisedkillua@gmail.com | promisedkillua.sbs</span>
+    </div>
+
+    <!-- Open Source & Protocol Engineering -->
+    <section class="section">
+      <h2 class="section-title">Open Source Systems &amp; Protocol Engineering</h2>
+
+      <!-- DOT -->
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">DOT — Sovereign Cryptographic Solana Vault (Open Source)</span>
+          <span class="item-date">2026</span>
+        </div>
+        <div class="item-links">
+          <a href="https://github.com/collinstheegod376/DOT" target="_blank">GitHub: collinstheegod376/DOT</a>
+          <span>&bull;</span>
+          <a href="https://dot-eight-gilt.vercel.app" target="_blank">Live Demo: dot-eight-gilt.vercel.app</a>
+          <span class="tag">Next.js 16</span>
+          <span class="tag">React 19</span>
+          <span class="tag">@solana/web3.js</span>
+          <span class="tag">@noble/ciphers</span>
+          <span class="tag">WebAuthn</span>
+        </div>
+        <ul class="bullets">
+          <li>Architected a zero-server, self-custodial cryptographic vault where keys are generated, encrypted, and isolated strictly on the local device.</li>
+          <li>Engineered biometric passkey authentication via device Secure Enclaves, air-gapped QR transaction signing, and native SOL / SPL token asset management.</li>
+          <li>Eliminated all server custody vectors: "Dot holds no keys and runs no servers. Your funds, your device, your call."</li>
+        </ul>
+      </div>
+
+      <!-- Arachnos AI -->
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Arachnos AI — Local-First Learning Extension &amp; Visual Companion (Open Source)</span>
+          <span class="item-date">2026</span>
+        </div>
+        <div class="item-links">
+          <a href="https://github.com/collinstheegod376/Arachnos-AI" target="_blank">GitHub: collinstheegod376/Arachnos-AI</a>
+          <span class="tag">Manifest V3</span>
+          <span class="tag">Local Private RAG</span>
+          <span class="tag">Inverse Kinematics (60 FPS)</span>
+          <span class="tag">Node.js</span>
+        </div>
+        <ul class="bullets">
+          <li>Engineered a private, zero-cloud browser AI companion featuring 60 FPS procedural inverse-kinematic spiders crawling live web pages.</li>
+          <li>Developed on-screen knowledge harvesting via silk tractor beams, private local vector memory, and real-time query answering with 100% provenance.</li>
+          <li>Enforced zero cloud dependency, guaranteeing user browsing privacy and data sovereignty across all sessions.</li>
+        </ul>
+      </div>
+
+      <!-- Wheelrush & Orvix -->
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Wheelrush &amp; Orvix Solana Dev Radar</span>
+          <span class="item-date">2026</span>
+        </div>
+        <div class="item-links">
+          <a href="https://wheelrush.fun/" target="_blank">Wheelrush: wheelrush.fun</a>
+          <span>&bull;</span>
+          <a href="https://www.orvixagent.fun/" target="_blank">Orvix: orvixagent.fun</a>
+          <span class="tag">React</span>
+          <span class="tag">Tailwind CSS</span>
+          <span class="tag">Solana Status API</span>
+        </div>
+        <ul class="bullets">
+          <li><strong>Wheelrush:</strong> Built an interactive spin-to-win web game featuring realistic physics simulations, tiered prize algorithms up to $10B virtual cash, and persistent global leaderboards.</li>
+          <li><strong>Orvix:</strong> Created a Solana developer intelligence radar aggregating official incident reports and Agave software releases with live auto-refresh, local bookmarks, and raw JSON export.</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <!-- Professional Experience -->
+    <section class="section">
+      <h2 class="section-title">Professional Experience</h2>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Full-Stack Software Engineer | Freelance &amp; Contract</span>
+          <span class="item-date">10+ Months Experience</span>
+        </div>
+        <ul class="bullets">
+          <li>Architected and delivered high-performance web applications, decentralized blockchain interfaces, and custom AI tools for clients globally.</li>
+          <li>Ensured pixel-perfect implementation of Figma designs with strict performance budgets (sub-second load times, 95+ Lighthouse scores).</li>
+          <li>Engineered end-to-end full-stack architectures combining Next.js/React frontends with Node.js/PostgreSQL backends and Web3 RPC providers.</li>
+          <li>Implemented CI/CD automation with GitHub Actions, containerized microservices with Docker, and configured reverse proxies with Nginx.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Web Developer Intern | Creative Agency</span>
+          <span class="item-date">Contract</span>
+        </div>
+        <ul class="bullets">
+          <li>Engineered foundational, high-converting responsive landing pages and component libraries supporting agency marketing initiatives.</li>
+          <li>Collaborated in agile cross-functional sprints, diagnosing cross-browser rendering discrepancies and optimizing production assets.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Education & Continuous Learning -->
+    <section class="section" style="margin-bottom: 0;">
+      <h2 class="section-title">Education &amp; Professional Practice</h2>
+      <div class="item-header">
+        <span class="item-title">Software Engineering &amp; Full-Stack Web Development</span>
+        <span class="item-date">Continuous Practice &amp; Production Work</span>
+      </div>
+      <p style="font-size: 8.8pt; color: #475569; margin-top: 2px; line-height: 1.4;">
+        Intensive practical mastery in modern TypeScript ecosystems, decentralized finance protocols, generative AI multi-agent architectures, cryptographic systems, and scalable cloud deployments.
+      </p>
+    </section>
+
+  </div>
+</body>
+</html>

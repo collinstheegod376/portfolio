@@ -7,13 +7,13 @@
   <!-- Homepage / Portfolio -->
   <url>
     <loc>https://promisedkillua.sbs/</loc>
-    <lastmod>2026-09-26</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://promisedkillua.sbs/killua-hero.jpg</image:loc>
-      <image:title>Promised Killua - Full-Stack Web Developer Hero Image</image:title>
-      <image:caption>Promised Killua, also known as promisedkillua and collinstheegod376, is a full-stack web developer specializing in React, Next.js, and TypeScript.</image:caption>
+      <image:title>Promised Killua - Full-Stack Software Engineer Hero Image</image:title>
+      <image:caption>Promised Killua, also known as promisedkillua and collinstheegod376, is a full-stack software engineer specializing in React, Next.js, Solana Web3, and TypeScript.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://promisedkillua.sbs/favicon.jpg</image:loc>
@@ -21,10 +21,18 @@
     </image:image>
   </url>
 
-  <!-- Downloadable CV -->
+  <!-- Downloadable Professional CV PDF -->
   <url>
     <loc>https://promisedkillua.sbs/Promised_Killua_CV_Professional.pdf</loc>
-    <lastmod>2026-09-26</lastmod>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Professional CV Web Version -->
+  <url>
+    <loc>https://promisedkillua.sbs/cv.html</loc>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

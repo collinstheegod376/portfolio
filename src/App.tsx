@@ -213,7 +213,7 @@ const App = () => {
             Hi, I'm Killua
           </h1>
           <p className="max-w-[662px] font-light text-[24px] leading-[48px] text-[#6F6F6F] mb-12">
-            Hello Promised Killua Here I Am A <span className="font-bold text-white">Fullstack Web Developer</span>. I Have Over <span className="font-bold text-white">7 Months</span> Of Experience In Web Development. I Have Worked On Various Web Applications,
+            Hello Promised Killua Here I Am A <span className="font-bold text-white">Fullstack Web Developer</span>. I Have Over <span className="font-bold text-white">10 Months</span> Of Experience In Web Development. I Have Worked On Various Web Applications,
           </p>
           <div className="flex flex-row items-center gap-[31px]">
             <motion.a 
@@ -275,7 +275,7 @@ const App = () => {
             className="flex flex-col w-[250px] shrink-0 pt-10"
           >
             <span className="font-sans font-medium text-[16px] leading-[48px] text-[#6F6F6F]">
-              7 Months  of
+              10 Months  of
             </span>
             <h2 className="font-sans font-bold text-[80px] leading-[48px] text-white my-4">
               XP
@@ -371,7 +371,7 @@ const App = () => {
         </motion.a>
 
         <div className="w-full flex flex-col gap-10">
-          {/* Card 1 */}
+          {/* Card 1 - Wheelrush */}
           <motion.div 
             whileHover={{ y: -6 }}
             transition={{ duration: 0.3 }}
@@ -404,7 +404,7 @@ const App = () => {
             </div>
           </motion.div>
 
-          {/* Card 2 */}
+          {/* Card 2 - Orvix */}
           <motion.div 
             whileHover={{ y: -6 }}
             transition={{ duration: 0.3 }}
@@ -433,6 +433,204 @@ const App = () => {
               </p>
               <p className="text-[#848484] font-sans font-normal text-[14px] leading-[26px]">
                 Built with vanilla HTML, CSS, and JavaScript. Features live auto-refresh, filterable feed (network/releases/saved), local bookmarking, and raw data export. Focused on accessibility, performance, and a sharp dark UI.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Card 3 - Anizuki */}
+          <motion.div 
+            whileHover={{ y: -6 }}
+            transition={{ duration: 0.3 }}
+            className="bg-[#111111] rounded-[40px] p-8 md:p-14 flex flex-col md:flex-row gap-8 md:gap-16 w-full shadow-lg border border-white/5"
+          >
+            <div className="flex flex-col md:w-[35%] shrink-0">
+              <h4 className="text-white font-sans font-bold text-[22px] leading-tight mb-2">FULLSTACK WEB DEVELOPER</h4>
+              <span className="text-[#A259FF] font-sans font-medium text-[15px] mb-[30px] block">Contract</span>
+              <span className="text-[#6F6F6F] font-sans text-[13px] leading-relaxed block">Completed<br /></span>
+            </div>
+            <div className="flex flex-col md:w-[65%]">
+              <h5 className="font-sans font-bold text-[18px] mb-6">
+                <motion.a 
+                  whileHover={{ x: 4 }}
+                  href="https://www.anizuki.sbs" 
+                  target="_blank" 
+                  rel="noreferrer" 
+                  className="text-[#A259FF] hover:text-white transition-all underline-offset-4 hover:underline flex items-center gap-2 w-max"
+                >
+                  Anizuki
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </motion.a>
+              </h5>
+              <p className="text-[#848484] font-sans font-normal text-[14px] leading-[26px] mb-6">
+                Real-Time Anime Trivia & Quiz Arena built with Next.js. Features multiplayer lobbies, PIN-based game rooms, instant head-to-head challenges, category playlists (Series, Movies, Games), achievements, and a global leaderboard.
+              </p>
+              <p className="text-[#848484] font-sans font-normal text-[14px] leading-[26px]">
+                Built with Next.js, TypeScript, and modern real-time state synchronization for low-latency scoring and seamless multiplayer sessions.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Card 4 - SolTrace */}
+          <motion.div 
+            whileHover={{ y: -6 }}
+            transition={{ duration: 0.3 }}
+            className="bg-[#111111] rounded-[40px] p-8 md:p-14 flex flex-col md:flex-row gap-8 md:gap-16 w-full shadow-lg border border-white/5"
+          >
+            <div className="flex flex-col md:w-[35%] shrink-0">
+              <h4 className="text-white font-sans font-bold text-[22px] leading-tight mb-2">FULLSTACK DEVELOPER</h4>
+              <span className="text-[#A259FF] font-sans font-medium text-[15px] mb-[30px] block">Contract</span>
+              <span className="text-[#6F6F6F] font-sans text-[13px] leading-relaxed block">Completed<br /></span>
+            </div>
+            <div className="flex flex-col md:w-[65%]">
+              <h5 className="font-sans font-bold text-[18px] mb-6">
+                <motion.a 
+                  whileHover={{ x: 4 }}
+                  href="https://soltracer.vercel.app" 
+                  target="_blank" 
+                  rel="noreferrer" 
+                  className="text-[#A259FF] hover:text-white transition-all underline-offset-4 hover:underline flex items-center gap-2 w-max"
+                >
+                  SolTrace (Sol Tracer AI)
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </motion.a>
+              </h5>
+              <p className="text-[#848484] font-sans font-normal text-[14px] leading-[26px] mb-6">
+                Open-source conversational AI blockchain scanner for Solana. Features real-time wallet tracking, visual money flow diagrams, drainer risk audits, and DEX swap analytics.
+              </p>
+              <p className="text-[#848484] font-sans font-normal text-[14px] leading-[26px]">
+                Built with Next.js, TypeScript, and Tailwind CSS. Features prompt-driven transaction path tracing, token bundle intelligence, and automated risk scoring for on-chain analysis.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Card 5 - Allpad */}
+          <motion.div 
+            whileHover={{ y: -6 }}
+            transition={{ duration: 0.3 }}
+            className="bg-[#111111] rounded-[40px] p-8 md:p-14 flex flex-col md:flex-row gap-8 md:gap-16 w-full shadow-lg border border-white/5"
+          >
+            <div className="flex flex-col md:w-[35%] shrink-0">
+              <h4 className="text-white font-sans font-bold text-[22px] leading-tight mb-2">FRONTEND DEVELOPER</h4>
+              <span className="text-[#A259FF] font-sans font-medium text-[15px] mb-[30px] block">Contract</span>
+              <span className="text-[#6F6F6F] font-sans text-[13px] leading-relaxed block">Completed<br /></span>
+            </div>
+            <div className="flex flex-col md:w-[65%]">
+              <h5 className="font-sans font-bold text-[18px] mb-6">
+                <motion.a 
+                  whileHover={{ x: 4 }}
+                  href="https://www.allpad.online" 
+                  target="_blank" 
+                  rel="noreferrer" 
+                  className="text-[#A259FF] hover:text-white transition-all underline-offset-4 hover:underline flex items-center gap-2 w-max"
+                >
+                  Allpad — Live Solana Flow Board
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </motion.a>
+              </h5>
+              <p className="text-[#848484] font-sans font-normal text-[14px] leading-[26px] mb-6">
+                Allpad ranks the ten busiest boosted Solana mints by day turnover, with prices and depth refreshed every minute. High-speed flow board designed for clean signal with no fluff.
+              </p>
+              <p className="text-[#848484] font-sans font-normal text-[14px] leading-[26px]">
+                Built with React, TypeScript, and modern component architecture. Features live session readouts, market depth tracking, and velocity monitoring across active Solana mints.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Card 6 - Lattice Lab */}
+          <motion.div 
+            whileHover={{ y: -6 }}
+            transition={{ duration: 0.3 }}
+            className="bg-[#111111] rounded-[40px] p-8 md:p-14 flex flex-col md:flex-row gap-8 md:gap-16 w-full shadow-lg border border-white/5"
+          >
+            <div className="flex flex-col md:w-[35%] shrink-0">
+              <h4 className="text-white font-sans font-bold text-[22px] leading-tight mb-2">FULLSTACK WEB DEVELOPER</h4>
+              <span className="text-[#A259FF] font-sans font-medium text-[15px] mb-[30px] block">Contract</span>
+              <span className="text-[#6F6F6F] font-sans text-[13px] leading-relaxed block">Completed<br /></span>
+            </div>
+            <div className="flex flex-col md:w-[65%]">
+              <h5 className="font-sans font-bold text-[18px] mb-6">
+                <motion.a 
+                  whileHover={{ x: 4 }}
+                  href="https://www.latticelab.fun" 
+                  target="_blank" 
+                  rel="noreferrer" 
+                  className="text-[#A259FF] hover:text-white transition-all underline-offset-4 hover:underline flex items-center gap-2 w-max"
+                >
+                  Lattice Lab — Virtual Laboratory
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </motion.a>
+              </h5>
+              <p className="text-[#848484] font-sans font-normal text-[14px] leading-[26px] mb-6">
+                A multi-agent research operating system for materials science. Seven autonomous researchers run one materials-science loop end to end — reading prior work, forming hypotheses, proposing candidates, simulating them, and archiving results.
+              </p>
+              <p className="text-[#848484] font-sans font-normal text-[14px] leading-[26px]">
+                Built with Next.js, TypeScript, and Tailwind CSS. Features an interactive laboratory operator console, superconductor candidate archives, and live telemetry feeds.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Card 7 - DOT */}
+          <motion.div 
+            whileHover={{ y: -6 }}
+            transition={{ duration: 0.3 }}
+            className="bg-[#111111] rounded-[40px] p-8 md:p-14 flex flex-col md:flex-row gap-8 md:gap-16 w-full shadow-lg border border-white/5"
+          >
+            <div className="flex flex-col md:w-[35%] shrink-0">
+              <h4 className="text-white font-sans font-bold text-[22px] leading-tight mb-2">FULLSTACK DEVELOPER</h4>
+              <span className="text-[#A259FF] font-sans font-medium text-[15px] mb-[30px] block">Open Source</span>
+              <span className="text-[#6F6F6F] font-sans text-[13px] leading-relaxed block">Completed<br /></span>
+            </div>
+            <div className="flex flex-col md:w-[65%]">
+              <h5 className="font-sans font-bold text-[18px] mb-6">
+                <motion.a 
+                  whileHover={{ x: 4 }}
+                  href="https://github.com/collinstheegod376/DOT" 
+                  target="_blank" 
+                  rel="noreferrer" 
+                  className="text-[#A259FF] hover:text-white transition-all underline-offset-4 hover:underline flex items-center gap-2 w-max"
+                >
+                  DOT — Sovereign Cryptographic Vault
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </motion.a>
+              </h5>
+              <p className="text-[#848484] font-sans font-normal text-[14px] leading-[26px] mb-6">
+                A sovereign, zero-server self-custodial Solana vault. Security keys are generated and stored locally on-device with biometric passkey authentication via device Secure Enclave and air-gapped QR transaction signing.
+              </p>
+              <p className="text-[#848484] font-sans font-normal text-[14px] leading-[26px]">
+                “Dot holds no keys and runs no servers. Your funds, your device, your call.” Built with Next.js 16, React 19, TypeScript, Tailwind CSS, @solana/web3.js, @noble/ciphers, @scure/bip39, and SPL token management.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Card 8 - Arachnos-AI */}
+          <motion.div 
+            whileHover={{ y: -6 }}
+            transition={{ duration: 0.3 }}
+            className="bg-[#111111] rounded-[40px] p-8 md:p-14 flex flex-col md:flex-row gap-8 md:gap-16 w-full shadow-lg border border-white/5"
+          >
+            <div className="flex flex-col md:w-[35%] shrink-0">
+              <h4 className="text-white font-sans font-bold text-[22px] leading-tight mb-2">FULLSTACK DEVELOPER</h4>
+              <span className="text-[#A259FF] font-sans font-medium text-[15px] mb-[30px] block">Open Source</span>
+              <span className="text-[#6F6F6F] font-sans text-[13px] leading-relaxed block">Completed<br /></span>
+            </div>
+            <div className="flex flex-col md:w-[65%]">
+              <h5 className="font-sans font-bold text-[18px] mb-6">
+                <motion.a 
+                  whileHover={{ x: 4 }}
+                  href="https://github.com/collinstheegod376/Arachnos-AI" 
+                  target="_blank" 
+                  rel="noreferrer" 
+                  className="text-[#A259FF] hover:text-white transition-all underline-offset-4 hover:underline flex items-center gap-2 w-max"
+                >
+                  Arachnos AI — Learning Extension
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </motion.a>
+              </h5>
+              <p className="text-[#848484] font-sans font-normal text-[14px] leading-[26px] mb-6">
+                A local-first Chrome extension and personal AI companion living in your browser. Features 60 FPS procedural animated spiders that visually crawl pages, harvest on-screen knowledge with silk tractor beams, and answer queries via private local RAG.
+              </p>
+              <p className="text-[#848484] font-sans font-normal text-[14px] leading-[26px]">
+                Built with Manifest V3, TypeScript, and a local brain server. 100% private with zero cloud dependency, remembering context locally with full citation provenance across all visited pages.
               </p>
             </div>
           </motion.div>
@@ -467,6 +665,7 @@ const App = () => {
               { name: "React JS", iconUrl: "https://cdn.simpleicons.org/react/61DBFB" },
               { name: "React Native", iconUrl: "https://cdn.simpleicons.org/react/61DBFB" },
               { name: "Next.JS", iconUrl: "https://cdn.simpleicons.org/nextdotjs/white" },
+              { name: "Tailwind CSS", iconUrl: "https://cdn.simpleicons.org/tailwindcss/06B6D4" },
               { name: "Vite", iconUrl: "https://cdn.simpleicons.org/vite/646CFF" },
               { name: "Figma", iconUrl: "https://cdn.simpleicons.org/figma" },
               { name: "React Testing Library", iconUrl: "https://cdn.simpleicons.org/testinglibrary/E33332" }
@@ -484,18 +683,38 @@ const App = () => {
           />
           <TechCategory
             index={3}
-            title="Devops"
+            title="Web3 & Blockchain"
             items={[
-              { name: "Github Actions", iconUrl: "https://cdn.simpleicons.org/githubactions/2088FF" }
+              { name: "Solana", iconUrl: "https://cdn.simpleicons.org/solana/14F195" },
+              { name: "Web3.js", iconUrl: "https://cdn.simpleicons.org/web3dotjs/F16822" },
+              { name: "Ethereum", iconUrl: "https://cdn.simpleicons.org/ethereum" }
             ]}
           />
           <TechCategory
             index={4}
+            title="AI & Systems"
+            items={[
+              { name: "Multi-Agent AI", iconUrl: "https://cdn.simpleicons.org/huggingface" },
+              { name: "Chrome Extensions", iconUrl: "https://cdn.simpleicons.org/googlechrome/4285F4" }
+            ]}
+          />
+          <TechCategory
+            index={5}
             title="Back-end"
             items={[
               { name: "Node.js", iconUrl: "https://cdn.simpleicons.org/nodedotjs/339933" },
               { name: "PostgreSQL", iconUrl: "https://cdn.simpleicons.org/postgresql/4169E1" },
-              { name: "Supabase", iconUrl: "https://cdn.simpleicons.org/supabase/3ECF8E" }
+              { name: "Supabase", iconUrl: "https://cdn.simpleicons.org/supabase/3ECF8E" },
+              { name: "Prisma", iconUrl: "https://cdn.simpleicons.org/prisma/white" }
+            ]}
+          />
+          <TechCategory
+            index={6}
+            title="Devops"
+            items={[
+              { name: "Github Actions", iconUrl: "https://cdn.simpleicons.org/githubactions/2088FF" },
+              { name: "Docker", iconUrl: "https://cdn.simpleicons.org/docker/2496ED" },
+              { name: "Nginx", iconUrl: "https://cdn.simpleicons.org/nginx/009639" }
             ]}
           />
         </div>
